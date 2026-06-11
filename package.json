@@ -1,0 +1,13 @@
+{
+  "name": "orchid-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "OrchidCare backend",
+  "scripts": {
+    "scaffold-info": "node -e \"console.log('OrchidCare backend')\""
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
