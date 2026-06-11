@@ -1,0 +1,23 @@
+import cors from "cors";
+import express from "express";
+import helmet from "helmet";
+
+import { env } from "./config/env.js";
+import { errorHandler } from "./middleware/errorHandler.js";
+import { requestLogger } from "./middleware/requestLogger.js";
+import { healthRouter } from "./modules/health/health.routes.js";
+
+export function createApp() {
+  const app = express();
+
+  app.use(helmet());
+  app.use(cors({ origin: env.corsOrigin }));
+  app.use(express.json());
+  app.use(requestLogger);
+
+  app.use("/api/health", healthRouter);
+
+  app.use(errorHandler);
+
+  return app;
+}

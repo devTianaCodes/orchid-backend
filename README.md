@@ -2,7 +2,7 @@
 
 Backend API for OrchidCare, an orchid encyclopedia web app.
 
-This repository will contain the Node, Express, TypeScript, and PostgreSQL API for orchid data, search, filters, detailed care pages, and future account-backed features.
+This repository contains the Node, Express, TypeScript, and PostgreSQL API shell for orchid data, search, filters, detailed care pages, and future account-backed features.
 
 ## Planned Stack
 
@@ -26,13 +26,29 @@ The MVP database will use PostgreSQL and a repeatable SQL seed file with 50 real
 
 ## Current Status
 
-This is a minimal publish-ready scaffold. Real API implementation starts after the repository is published.
+This is a project bootstrap scaffold. The health API can run, but the orchid database and feature endpoints are still planned work.
 
-## Planned Local Setup
+## Local Setup
 
 ```bash
 npm install
 npm run dev
 ```
 
-These commands will be enabled when the Express app is bootstrapped in the next phase.
+The API will start on:
+
+```bash
+http://localhost:3000/api
+```
+
+Health check:
+
+```bash
+curl http://localhost:3000/api/health
+```
+
+PostgreSQL can be started later with:
+
+```bash
+docker compose up -d
+```

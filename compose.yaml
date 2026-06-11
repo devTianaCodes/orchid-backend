@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: orchidcare-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: orchidcare
+      POSTGRES_USER: orchidcare
+      POSTGRES_PASSWORD: orchidcare
+    ports:
+      - "5432:5432"
+    volumes:
+      - orchidcare-postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U orchidcare -d orchidcare"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  orchidcare-postgres-data:

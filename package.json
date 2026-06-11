@@ -3,9 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "OrchidCare backend",
+  "description": "Express and PostgreSQL backend for the OrchidCare orchid encyclopedia.",
   "scripts": {
-    "scaffold-info": "node -e \"console.log('OrchidCare backend')\""
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "typecheck": "tsc --noEmit",
+    "scaffold-info": "node -e \"console.log('OrchidCare backend scaffold')\""
+  },
+  "dependencies": {
+    "cors": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "helmet": "latest"
+  },
+  "devDependencies": {
+    "@types/cors": "latest",
+    "@types/express": "latest",
+    "@types/node": "latest",
+    "tsx": "latest",
+    "typescript": "latest"
   },
   "engines": {
     "node": ">=20"
