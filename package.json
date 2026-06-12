@@ -7,24 +7,29 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
+    "db:schema": "tsx scripts/run-sql.ts db/schema.sql",
+    "db:seed": "tsx scripts/run-sql.ts db/seed.sql",
+    "db:reset": "npm run db:schema && npm run db:seed",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "start": "node dist/server.js",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.scripts.json",
     "scaffold-info": "node -e \"console.log('OrchidCare backend scaffold')\""
   },
   "dependencies": {
     "cors": "latest",
     "dotenv": "latest",
     "express": "latest",
-    "helmet": "latest"
+    "helmet": "latest",
+    "pg": "^8.21.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/cors": "latest",
     "@types/express": "latest",
     "@types/node": "latest",
+    "@types/pg": "^8.20.0",
     "eslint": "^10.5.0",
     "globals": "^17.6.0",
     "prettier": "^3.8.4",

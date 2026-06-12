@@ -4,6 +4,7 @@ import helmet from "helmet";
 
 import { env } from "./config/env.js";
 import { errorHandler } from "./middleware/errorHandler.js";
+import { notFoundHandler } from "./middleware/notFoundHandler.js";
 import { requestLogger } from "./middleware/requestLogger.js";
 import { healthRouter } from "./modules/health/health.routes.js";
 
@@ -17,6 +18,7 @@ export function createApp() {
 
   app.use("/api/health", healthRouter);
 
+  app.use(notFoundHandler);
   app.use(errorHandler);
 
   return app;

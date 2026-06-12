@@ -52,3 +52,13 @@ PostgreSQL can be started later with:
 ```bash
 docker compose up -d
 ```
+
+Apply the database schema and seed data with:
+
+```bash
+npm run db:reset
+```
+
+The database scripts read `DATABASE_URL` from the environment. If it is not set, they use the local development value from `.env.example`.
+
+The current seed file is a placeholder for the planned 50 real orchid records.
