@@ -7,6 +7,9 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "start": "node dist/server.js",
     "typecheck": "tsc --noEmit",
     "scaffold-info": "node -e \"console.log('OrchidCare backend scaffold')\""
@@ -18,11 +21,16 @@
     "helmet": "latest"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/cors": "latest",
     "@types/express": "latest",
     "@types/node": "latest",
+    "eslint": "^10.5.0",
+    "globals": "^17.6.0",
+    "prettier": "^3.8.4",
     "tsx": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "typescript-eslint": "^8.61.0"
   },
   "engines": {
     "node": ">=20"
