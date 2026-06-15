@@ -7,6 +7,7 @@ import { errorHandler } from "./middleware/errorHandler.js";
 import { notFoundHandler } from "./middleware/notFoundHandler.js";
 import { requestLogger } from "./middleware/requestLogger.js";
 import { healthRouter } from "./modules/health/health.routes.js";
+import { orchidRouter } from "./modules/orchids/orchid.routes.js";
 
 export function createApp() {
   const app = express();
@@ -17,6 +18,7 @@ export function createApp() {
   app.use(requestLogger);
 
   app.use("/api/health", healthRouter);
+  app.use("/api/orchids", orchidRouter);
 
   app.use(notFoundHandler);
   app.use(errorHandler);
