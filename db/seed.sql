@@ -248,11 +248,11 @@ WITH seeded_orchids AS (
       'A Madagascan orchid famous for starry white night-fragrant flowers with a very long spur.',
       'Madagascar',
       'epiphyte',
-      'https://upload.wikimedia.org/wikipedia/commons/4/4e/Angraecum_sesquipedale_Thouars%2C_Hist._Orchid._66_%281822%29_%2832375519248%29.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/8/8e/Angraecum_sesquipedale_Orchi_4.jpg',
       'White Angraecum sesquipedale orchid flower with a long nectar spur.',
-      'https://commons.wikimedia.org/wiki/File:Angraecum_sesquipedale_Thouars,_Hist._Orchid._66_(1822)_(32375519248).jpg',
-      'CC BY 2.0',
-      'Sunoochi, via Wikimedia Commons'
+      'https://commons.wikimedia.org/wiki/File:Angraecum_sesquipedale_Orchi_4.jpg',
+      'CC BY-SA 3.0',
+      'Orchi, via Wikimedia Commons'
     ),
     (
       'laelia-anceps',
@@ -295,6 +295,146 @@ WITH seeded_orchids AS (
       'https://commons.wikimedia.org/wiki/File:15.Dracula_simia,_the_Monkey_Face_Orchid_(10957423336).jpg',
       'CC BY 2.0',
       'Dick Culbert, via Wikimedia Commons'
+    ),
+    (
+      'medusa-orchid',
+      'Medusa Orchid',
+      'Bulbophyllum medusae',
+      'Bulbophyllum',
+      'An unusual orchid with long fringed white flowers that resemble flowing hair.',
+      'Southeast Asia',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/f/fe/Bulbophyllum_medusae_%2814363977295%29.jpg',
+      'Bulbophyllum medusae orchid flowers with long white fringed segments.',
+      'https://commons.wikimedia.org/wiki/File:Bulbophyllum_medusae_(14363977295).jpg',
+      'CC BY 2.0',
+      'Dick Culbert, via Wikimedia Commons'
+    ),
+    (
+      'white-nun-orchid',
+      'White Nun Orchid',
+      'Lycaste skinneri',
+      'Lycaste',
+      'A graceful orchid known for large waxy flowers in white, pink, or lavender tones.',
+      'Guatemala, Mexico, and Central America',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/a/a7/R._Warner_%26_B.S._Williams_-_The_Orchid_Album_-_volume_06_-_plate_283_%281887%29.jpg',
+      'Botanical illustration of Lycaste skinneri white nun orchid flowers.',
+      'https://commons.wikimedia.org/wiki/File:R._Warner_%26_B.S._Williams_-_The_Orchid_Album_-_volume_06_-_plate_283_(1887).jpg',
+      'Public domain',
+      'Unknown author, via Wikimedia Commons'
+    ),
+    (
+      'butterfly-orchid',
+      'Butterfly Orchid',
+      'Psychopsis papilio',
+      'Psychopsis',
+      'A sequential-blooming orchid with tall stems and butterfly-like flowers.',
+      'Trinidad and northern South America',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/3/37/Psychopsis_papilio_GotBot_2015_001.jpg',
+      'Psychopsis papilio butterfly orchid flower on a tall stem.',
+      'https://commons.wikimedia.org/wiki/File:Psychopsis_papilio_GotBot_2015_001.jpg',
+      'CC BY 3.0',
+      'Averater, via Wikimedia Commons'
+    ),
+    (
+      'scarlet-slipper-orchid',
+      'Scarlet Slipper Orchid',
+      'Phragmipedium besseae',
+      'Phragmipedium',
+      'A vivid slipper orchid valued for bright orange to scarlet pouch-shaped flowers.',
+      'Peru and Ecuador',
+      'terrestrial',
+      'https://upload.wikimedia.org/wikipedia/commons/8/87/Phragmipedium_besseae.jpg',
+      'Bright orange Phragmipedium besseae slipper orchid flower.',
+      'https://commons.wikimedia.org/wiki/File:Phragmipedium_besseae.jpg',
+      'Public domain',
+      'Wikimedia Commons'
+    ),
+    (
+      'mother-of-pearl-orchid',
+      'Mother of Pearl Orchid',
+      'Catasetum pileatum',
+      'Catasetum',
+      'A deciduous orchid with large showy flowers and a seasonal dry rest.',
+      'Venezuela, Colombia, Ecuador, and Brazil',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/5/5a/Catasetum_pileatum_Orchi_03.jpg',
+      'Catasetum pileatum orchid flower with pale broad petals and a prominent lip.',
+      'https://commons.wikimedia.org/wiki/File:Catasetum_pileatum_Orchi_03.jpg',
+      'CC BY-SA 3.0',
+      'Orchi, via Wikimedia Commons'
+    ),
+    (
+      'fragrant-aerides',
+      'Fragrant Aerides',
+      'Aerides odorata',
+      'Aerides',
+      'A fragrant vandaceous orchid with pendant sprays of pink and white flowers.',
+      'South and Southeast Asia',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/5/5f/A_and_B_Larsen_orchids_-_Aerides_odorata_750-34x.jpg',
+      'Aerides odorata orchid spray with small pink and white flowers.',
+      'https://commons.wikimedia.org/wiki/File:A_and_B_Larsen_orchids_-_Aerides_odorata_750-34x.jpg',
+      'CC BY-SA 2.5 DK',
+      'Arne and Bent Larsen, via Wikimedia Commons'
+    ),
+    (
+      'foxtail-orchid',
+      'Foxtail Orchid',
+      'Rhynchostylis retusa',
+      'Rhynchostylis',
+      'A vandaceous orchid with dense pendant flower spikes that resemble a foxtail.',
+      'Indian subcontinent and Southeast Asia',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/6/6f/Rhynchostylis_retusa_%28Foxtail_orchid%29.jpg',
+      'Rhynchostylis retusa foxtail orchid with a dense pendant flower spike.',
+      'https://commons.wikimedia.org/wiki/File:Rhynchostylis_retusa_(Foxtail_orchid).jpg',
+      'CC BY-SA 4.0',
+      'Akasmita, via Wikimedia Commons'
+    ),
+    (
+      'chinese-ground-orchid',
+      'Chinese Ground Orchid',
+      'Bletilla striata',
+      'Bletilla',
+      'A hardy terrestrial orchid with pleated leaves and pink-purple spring flowers.',
+      'China, Japan, Korea, and nearby East Asian regions',
+      'terrestrial',
+      'https://upload.wikimedia.org/wikipedia/commons/e/ee/Bletilla_striata_%27Chinese_ground_orchid%27_%28Orchidaceae%29_flower.JPG',
+      'Pink-purple Bletilla striata Chinese ground orchid flower.',
+      'https://commons.wikimedia.org/wiki/File:Bletilla_striata_%27Chinese_ground_orchid%27_(Orchidaceae)_flower.JPG',
+      'CC BY-SA 3.0',
+      'Magnus Manske, via Wikimedia Commons'
+    ),
+    (
+      'samurai-orchid',
+      'Samurai Orchid',
+      'Vanda falcata',
+      'Vanda',
+      'A compact fragrant orchid formerly known as Neofinetia falcata.',
+      'Japan, Korea, and China',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/3/31/Vanda_falcata_-_Orchid_Nursery_Margaret_Mee_-_DSC09749.jpg',
+      'White Vanda falcata samurai orchid flowers with narrow petals.',
+      'https://commons.wikimedia.org/wiki/File:Vanda_falcata_-_Orchid_Nursery_Margaret_Mee_-_DSC09749.jpg',
+      'CC0',
+      'Daderot, via Wikimedia Commons'
+    ),
+    (
+      'black-orchid',
+      'Black Orchid',
+      'Prosthechea cochleata',
+      'Prosthechea',
+      'A long-blooming orchid with an upside-down flower form and a dark shell-like lip.',
+      'Florida, the Caribbean, Central America, and northern South America',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/3/3e/Prosthechea_cochleata%2C_the_Clamshell_Orchid_%2811023302476%29.jpg',
+      'Prosthechea cochleata black orchid flower with a dark central lip.',
+      'https://commons.wikimedia.org/wiki/File:Prosthechea_cochleata,_the_Clamshell_Orchid_(11023302476).jpg',
+      'CC BY 2.0',
+      'Dick Culbert, via Wikimedia Commons'
     )
   RETURNING id, slug
 )
@@ -335,6 +475,16 @@ SELECT
     WHEN 'laelia-anceps' THEN 'intermediate'
     WHEN 'coconut-orchid' THEN 'intermediate'
     WHEN 'monkey-face-orchid' THEN 'advanced'
+    WHEN 'medusa-orchid' THEN 'advanced'
+    WHEN 'white-nun-orchid' THEN 'intermediate'
+    WHEN 'butterfly-orchid' THEN 'intermediate'
+    WHEN 'scarlet-slipper-orchid' THEN 'advanced'
+    WHEN 'mother-of-pearl-orchid' THEN 'advanced'
+    WHEN 'fragrant-aerides' THEN 'intermediate'
+    WHEN 'foxtail-orchid' THEN 'intermediate'
+    WHEN 'chinese-ground-orchid' THEN 'beginner'
+    WHEN 'samurai-orchid' THEN 'intermediate'
+    WHEN 'black-orchid' THEN 'intermediate'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'bright-indirect'
@@ -357,6 +507,16 @@ SELECT
     WHEN 'laelia-anceps' THEN 'high'
     WHEN 'coconut-orchid' THEN 'bright-indirect'
     WHEN 'monkey-face-orchid' THEN 'medium'
+    WHEN 'medusa-orchid' THEN 'medium'
+    WHEN 'white-nun-orchid' THEN 'bright-indirect'
+    WHEN 'butterfly-orchid' THEN 'bright-indirect'
+    WHEN 'scarlet-slipper-orchid' THEN 'medium'
+    WHEN 'mother-of-pearl-orchid' THEN 'bright-indirect'
+    WHEN 'fragrant-aerides' THEN 'bright-indirect'
+    WHEN 'foxtail-orchid' THEN 'bright-indirect'
+    WHEN 'chinese-ground-orchid' THEN 'medium'
+    WHEN 'samurai-orchid' THEN 'bright-indirect'
+    WHEN 'black-orchid' THEN 'bright-indirect'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'moderate'
@@ -379,6 +539,16 @@ SELECT
     WHEN 'laelia-anceps' THEN 'moderate'
     WHEN 'coconut-orchid' THEN 'moderate'
     WHEN 'monkey-face-orchid' THEN 'frequent'
+    WHEN 'medusa-orchid' THEN 'frequent'
+    WHEN 'white-nun-orchid' THEN 'moderate'
+    WHEN 'butterfly-orchid' THEN 'moderate'
+    WHEN 'scarlet-slipper-orchid' THEN 'frequent'
+    WHEN 'mother-of-pearl-orchid' THEN 'moderate'
+    WHEN 'fragrant-aerides' THEN 'frequent'
+    WHEN 'foxtail-orchid' THEN 'frequent'
+    WHEN 'chinese-ground-orchid' THEN 'moderate'
+    WHEN 'samurai-orchid' THEN 'moderate'
+    WHEN 'black-orchid' THEN 'moderate'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 50
@@ -401,6 +571,16 @@ SELECT
     WHEN 'laelia-anceps' THEN 45
     WHEN 'coconut-orchid' THEN 50
     WHEN 'monkey-face-orchid' THEN 75
+    WHEN 'medusa-orchid' THEN 70
+    WHEN 'white-nun-orchid' THEN 50
+    WHEN 'butterfly-orchid' THEN 55
+    WHEN 'scarlet-slipper-orchid' THEN 60
+    WHEN 'mother-of-pearl-orchid' THEN 50
+    WHEN 'fragrant-aerides' THEN 60
+    WHEN 'foxtail-orchid' THEN 60
+    WHEN 'chinese-ground-orchid' THEN 45
+    WHEN 'samurai-orchid' THEN 50
+    WHEN 'black-orchid' THEN 55
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 70
@@ -423,6 +603,16 @@ SELECT
     WHEN 'laelia-anceps' THEN 70
     WHEN 'coconut-orchid' THEN 75
     WHEN 'monkey-face-orchid' THEN 90
+    WHEN 'medusa-orchid' THEN 90
+    WHEN 'white-nun-orchid' THEN 75
+    WHEN 'butterfly-orchid' THEN 80
+    WHEN 'scarlet-slipper-orchid' THEN 85
+    WHEN 'mother-of-pearl-orchid' THEN 75
+    WHEN 'fragrant-aerides' THEN 85
+    WHEN 'foxtail-orchid' THEN 85
+    WHEN 'chinese-ground-orchid' THEN 70
+    WHEN 'samurai-orchid' THEN 75
+    WHEN 'black-orchid' THEN 80
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 18
@@ -445,6 +635,16 @@ SELECT
     WHEN 'laelia-anceps' THEN 12
     WHEN 'coconut-orchid' THEN 16
     WHEN 'monkey-face-orchid' THEN 10
+    WHEN 'medusa-orchid' THEN 18
+    WHEN 'white-nun-orchid' THEN 14
+    WHEN 'butterfly-orchid' THEN 16
+    WHEN 'scarlet-slipper-orchid' THEN 14
+    WHEN 'mother-of-pearl-orchid' THEN 18
+    WHEN 'fragrant-aerides' THEN 18
+    WHEN 'foxtail-orchid' THEN 18
+    WHEN 'chinese-ground-orchid' THEN 8
+    WHEN 'samurai-orchid' THEN 12
+    WHEN 'black-orchid' THEN 18
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 29
@@ -467,6 +667,16 @@ SELECT
     WHEN 'laelia-anceps' THEN 28
     WHEN 'coconut-orchid' THEN 30
     WHEN 'monkey-face-orchid' THEN 22
+    WHEN 'medusa-orchid' THEN 30
+    WHEN 'white-nun-orchid' THEN 26
+    WHEN 'butterfly-orchid' THEN 28
+    WHEN 'scarlet-slipper-orchid' THEN 26
+    WHEN 'mother-of-pearl-orchid' THEN 30
+    WHEN 'fragrant-aerides' THEN 32
+    WHEN 'foxtail-orchid' THEN 32
+    WHEN 'chinese-ground-orchid' THEN 28
+    WHEN 'samurai-orchid' THEN 28
+    WHEN 'black-orchid' THEN 30
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Medium bark mix with good drainage and airflow.'
@@ -489,6 +699,16 @@ SELECT
     WHEN 'laelia-anceps' THEN 'Coarse bark, lava rock, or mounted culture with quick drying.'
     WHEN 'coconut-orchid' THEN 'Fine to medium bark mix that dries lightly between waterings.'
     WHEN 'monkey-face-orchid' THEN 'Fine bark or sphagnum-based mix kept cool, humid, and never stale.'
+    WHEN 'medusa-orchid' THEN 'Fine to medium bark or basket culture with constant humidity and airflow.'
+    WHEN 'white-nun-orchid' THEN 'Medium bark mix with moisture retention during growth and excellent drainage.'
+    WHEN 'butterfly-orchid' THEN 'Medium bark mix or mounted culture with steady moisture and airflow.'
+    WHEN 'scarlet-slipper-orchid' THEN 'Fine bark mix with moisture retention, clean water, and steady drainage.'
+    WHEN 'mother-of-pearl-orchid' THEN 'Medium bark mix that supports a dry rest after leaf drop.'
+    WHEN 'fragrant-aerides' THEN 'Open basket or coarse bark with fast drainage and high humidity.'
+    WHEN 'foxtail-orchid' THEN 'Open basket, coarse bark, or mounted culture with strong root airflow.'
+    WHEN 'chinese-ground-orchid' THEN 'Loose terrestrial mix with organic matter and reliable drainage.'
+    WHEN 'samurai-orchid' THEN 'Coarse bark, mounted culture, or traditional airy mound culture.'
+    WHEN 'black-orchid' THEN 'Medium bark mix or mounted culture with steady moisture and airflow.'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'varies'
@@ -511,6 +731,16 @@ SELECT
     WHEN 'laelia-anceps' THEN 'winter'
     WHEN 'coconut-orchid' THEN 'spring'
     WHEN 'monkey-face-orchid' THEN 'varies'
+    WHEN 'medusa-orchid' THEN 'varies'
+    WHEN 'white-nun-orchid' THEN 'winter'
+    WHEN 'butterfly-orchid' THEN 'varies'
+    WHEN 'scarlet-slipper-orchid' THEN 'varies'
+    WHEN 'mother-of-pearl-orchid' THEN 'summer'
+    WHEN 'fragrant-aerides' THEN 'summer'
+    WHEN 'foxtail-orchid' THEN 'spring'
+    WHEN 'chinese-ground-orchid' THEN 'spring'
+    WHEN 'samurai-orchid' THEN 'summer'
+    WHEN 'black-orchid' THEN 'varies'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Can bloom indoors for several months when kept warm and evenly cared for.'
@@ -533,6 +763,16 @@ SELECT
     WHEN 'laelia-anceps' THEN 'Tall spikes carry elegant lavender flowers, often in cooler months.'
     WHEN 'coconut-orchid' THEN 'Red flowers are known for a sweet coconut-like fragrance.'
     WHEN 'monkey-face-orchid' THEN 'Unusual flowers prefer cool cloud-forest conditions and high humidity.'
+    WHEN 'medusa-orchid' THEN 'Fringed flower segments hang in clusters and need high humidity to look their best.'
+    WHEN 'white-nun-orchid' THEN 'Large waxy flowers usually open from mature pseudobulbs after seasonal growth.'
+    WHEN 'butterfly-orchid' THEN 'Long-lived stems can produce one butterfly-like flower after another.'
+    WHEN 'scarlet-slipper-orchid' THEN 'Bright slipper flowers last well when roots stay evenly moist.'
+    WHEN 'mother-of-pearl-orchid' THEN 'Showy flowers appear during the warm growing season before a drier rest.'
+    WHEN 'fragrant-aerides' THEN 'Pendant sprays carry many fragrant small flowers in warm humid conditions.'
+    WHEN 'foxtail-orchid' THEN 'Dense pendant spikes carry many small flowers and can be strongly ornamental.'
+    WHEN 'chinese-ground-orchid' THEN 'Hardy pleated leaves and pink spring flowers rise from terrestrial pseudobulbs.'
+    WHEN 'samurai-orchid' THEN 'Small fragrant white flowers open in warm weather from compact fans.'
+    WHEN 'black-orchid' THEN 'Sequential flowers can continue for a long season from mature growths.'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Keep warm in bright indirect light, water when the bark is nearly dry, and avoid water sitting in the crown.'
@@ -555,6 +795,16 @@ SELECT
     WHEN 'laelia-anceps' THEN 'Give bright light, quick drainage, and a distinct dry-down between waterings.'
     WHEN 'coconut-orchid' THEN 'Grow in bright filtered light, water as roots approach dryness, and maintain gentle airflow.'
     WHEN 'monkey-face-orchid' THEN 'Keep cool, very humid, shaded, and evenly moist while avoiding stagnant media.'
+    WHEN 'medusa-orchid' THEN 'Grow warm, shaded, and very humid with steady moisture, quick drainage, and strong airflow.'
+    WHEN 'white-nun-orchid' THEN 'Water well in active growth, give bright filtered light, and reduce watering after growth matures.'
+    WHEN 'butterfly-orchid' THEN 'Provide bright filtered light, steady humidity, and avoid cutting green flowering stems.'
+    WHEN 'scarlet-slipper-orchid' THEN 'Keep evenly moist in moderate light with clean water and avoid drying the root zone hard.'
+    WHEN 'mother-of-pearl-orchid' THEN 'Water and feed during leafy growth, then give a drier rest after leaves yellow and drop.'
+    WHEN 'fragrant-aerides' THEN 'Grow warm and bright with frequent watering, high humidity, and excellent root airflow.'
+    WHEN 'foxtail-orchid' THEN 'Give warm bright conditions, high humidity, frequent watering, and a fast-drying root zone.'
+    WHEN 'chinese-ground-orchid' THEN 'Grow in a free-draining terrestrial mix with moderate light and a cooler winter rest.'
+    WHEN 'samurai-orchid' THEN 'Grow bright and airy with moderate moisture, good humidity, and cooler nights when possible.'
+    WHEN 'black-orchid' THEN 'Provide bright filtered light, steady warmth, and a lightly drying period between waterings.'
   END
 FROM seeded_orchids;
 
