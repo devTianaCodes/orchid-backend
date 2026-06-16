@@ -46,10 +46,22 @@ export type OrchidListFilters = {
   temperature?: number;
   growthType?: OrchidGrowthType;
   bloomSeason?: OrchidBloomSeason;
+  page: number;
+  pageSize: number;
+};
+
+export type OrchidListPagination = {
+  page: number;
+  pageSize: number;
+  totalItems: number;
+  totalPages: number;
+  hasPreviousPage: boolean;
+  hasNextPage: boolean;
 };
 
 export type OrchidListResponse = {
   orchids: OrchidListItem[];
+  pagination: OrchidListPagination;
 };
 
 export type OrchidDetailResponse = {

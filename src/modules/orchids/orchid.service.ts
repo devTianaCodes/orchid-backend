@@ -7,7 +7,7 @@ import type {
 } from "./orchid.types.js";
 
 export type OrchidService = {
-  listOrchids: (filters?: OrchidListFilters) => Promise<OrchidListResponse>;
+  listOrchids: (filters: OrchidListFilters) => Promise<OrchidListResponse>;
   getOrchidBySlug: (slug: string) => Promise<OrchidDetailResponse | null>;
   getFilterMetadata: () => Promise<OrchidFilterMetadataResponse>;
 };
@@ -15,9 +15,20 @@ export type OrchidService = {
 export function createOrchidService(repository: OrchidRepository): OrchidService {
   return {
     async listOrchids(filters) {
-      const orchids = await repository.listOrchids(filters);
+      const listResult = await repository.listOrchids(filters);
+      const totalPages = Math.ceil(listResult.totalItems / filters.pageSize);
 
-      return { orchids };
+      return {
+        orchids: listResult.orchids,
+        pagination: {
+          page: filters.page,
+          pageSize: filters.pageSize,
+          totalItems: listResult.totalItems,
+          totalPages,
+          hasPreviousPage: filters.page > 1,
+          hasNextPage: filters.page < totalPages,
+        },
+      };
     },
 
     async getOrchidBySlug(slug) {

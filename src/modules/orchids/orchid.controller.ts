@@ -85,9 +85,15 @@ const lightValues = ["low", "medium", "bright-indirect", "high"] as const;
 const waterValues = ["low", "moderate", "frequent"] as const;
 const growthTypeValues = ["epiphyte", "terrestrial", "lithophyte", "semi-terrestrial"] as const;
 const bloomSeasonValues = ["winter", "spring", "summer", "autumn", "varies"] as const;
+const defaultPage = 1;
+const defaultPageSize = 12;
+const maxPageSize = 40;
 
 function parseListFilters(request: Request): ParseResult {
-  const filters: OrchidListFilters = {};
+  const filters: OrchidListFilters = {
+    page: defaultPage,
+    pageSize: defaultPageSize,
+  };
   const query = request.query;
 
   const q = getSingleQueryValue(query.q);
@@ -166,6 +172,30 @@ function parseListFilters(request: Request): ParseResult {
     filters.bloomSeason = bloomSeason as OrchidBloomSeason;
   }
 
+  const page = parsePositiveIntegerQueryValue("page", query.page);
+
+  if ("error" in page) {
+    return page;
+  }
+
+  if (typeof page.value === "number") {
+    filters.page = page.value;
+  }
+
+  const pageSize = parsePositiveIntegerQueryValue("pageSize", query.pageSize);
+
+  if ("error" in pageSize) {
+    return pageSize;
+  }
+
+  if (typeof pageSize.value === "number") {
+    if (pageSize.value > maxPageSize) {
+      return { error: `pageSize must be less than or equal to ${maxPageSize}` };
+    }
+
+    filters.pageSize = pageSize.value;
+  }
+
   return filters;
 }
 
@@ -206,6 +236,25 @@ function parseNumberQueryValue(
 
   if (!Number.isFinite(parsedValue)) {
     return { error: `Invalid ${name} filter: ${rawValue}` };
+  }
+
+  return { value: parsedValue };
+}
+
+function parsePositiveIntegerQueryValue(
+  name: string,
+  value: Request["query"][string],
+): { value?: number } | { error: string } {
+  const rawValue = getSingleQueryValue(value);
+
+  if (!rawValue) {
+    return {};
+  }
+
+  const parsedValue = Number(rawValue);
+
+  if (!Number.isInteger(parsedValue) || parsedValue < 1) {
+    return { error: `${name} must be a positive integer` };
   }
 
   return { value: parsedValue };

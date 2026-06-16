@@ -13,7 +13,9 @@ import type {
 } from "./orchid.types.js";
 
 export type OrchidRepository = {
-  listOrchids: (filters?: OrchidListFilters) => Promise<OrchidListItem[]>;
+  listOrchids: (
+    filters: OrchidListFilters,
+  ) => Promise<{ orchids: OrchidListItem[]; totalItems: number }>;
   findOrchidBySlug: (slug: string) => Promise<OrchidDetail | null>;
   getFilterMetadata: () => Promise<OrchidFilterMetadataResponse>;
 };
@@ -59,63 +61,25 @@ type OrchidFilterMetadataRow = {
   temperature_max_celsius: number;
 };
 
+type OrchidCountRow = {
+  total_items: string;
+};
+
 export function createOrchidRepository(pool: Pool): OrchidRepository {
   return {
-    async listOrchids(filters = {}) {
-      const params: Array<number | string> = [];
-      const whereClauses: string[] = [];
+    async listOrchids(filters) {
+      const { params, whereSql } = buildListFilterQuery(filters);
+      const offset = (filters.page - 1) * filters.pageSize;
 
-      if (filters.q) {
-        params.push(`%${filters.q}%`);
-        whereClauses.push(`(
-          orchids.common_name ILIKE $${params.length}
-          OR orchids.scientific_name ILIKE $${params.length}
-          OR orchids.genus ILIKE $${params.length}
-          OR orchids.short_description ILIKE $${params.length}
-          OR orchid_care_profiles.potting_medium ILIKE $${params.length}
-          OR orchid_care_profiles.bloom_notes ILIKE $${params.length}
-          OR orchid_care_profiles.care_summary ILIKE $${params.length}
-        )`);
-      }
-
-      if (filters.difficulty) {
-        params.push(filters.difficulty);
-        whereClauses.push(`orchid_care_profiles.difficulty = $${params.length}`);
-      }
-
-      if (filters.light) {
-        params.push(filters.light);
-        whereClauses.push(`orchid_care_profiles.light_needs = $${params.length}`);
-      }
-
-      if (filters.water) {
-        params.push(filters.water);
-        whereClauses.push(`orchid_care_profiles.watering_needs = $${params.length}`);
-      }
-
-      if (typeof filters.humidity === "number") {
-        params.push(filters.humidity);
-        whereClauses.push(`$${params.length} BETWEEN orchid_care_profiles.humidity_min_percent
-          AND orchid_care_profiles.humidity_max_percent`);
-      }
-
-      if (typeof filters.temperature === "number") {
-        params.push(filters.temperature);
-        whereClauses.push(`$${params.length} BETWEEN orchid_care_profiles.temperature_min_celsius
-          AND orchid_care_profiles.temperature_max_celsius`);
-      }
-
-      if (filters.growthType) {
-        params.push(filters.growthType);
-        whereClauses.push(`orchids.growth_type = $${params.length}`);
-      }
-
-      if (filters.bloomSeason) {
-        params.push(filters.bloomSeason);
-        whereClauses.push(`orchid_care_profiles.bloom_season = $${params.length}`);
-      }
-
-      const whereSql = whereClauses.length > 0 ? `WHERE ${whereClauses.join(" AND ")}` : "";
+      const countResult = await pool.query<OrchidCountRow>(
+        `
+        SELECT COUNT(*) AS total_items
+        FROM orchids
+        INNER JOIN orchid_care_profiles ON orchid_care_profiles.orchid_id = orchids.id
+        ${whereSql}
+      `,
+        params,
+      );
 
       const result = await pool.query<OrchidListRow>(
         `
@@ -136,11 +100,16 @@ export function createOrchidRepository(pool: Pool): OrchidRepository {
         INNER JOIN orchid_care_profiles ON orchid_care_profiles.orchid_id = orchids.id
         ${whereSql}
         ORDER BY orchids.common_name ASC
+        LIMIT $${params.length + 1}
+        OFFSET $${params.length + 2}
       `,
-        params,
+        [...params, filters.pageSize, offset],
       );
 
-      return result.rows.map(mapOrchidListRow);
+      return {
+        orchids: result.rows.map(mapOrchidListRow),
+        totalItems: Number(countResult.rows[0]?.total_items ?? 0),
+      };
     },
 
     async findOrchidBySlug(slug) {
@@ -223,6 +192,66 @@ function mapOrchidListRow(row: OrchidListRow): OrchidListItem {
     bloomSeason: row.bloom_season,
     imageUrl: row.image_url,
     imageAlt: row.image_alt,
+  };
+}
+
+function buildListFilterQuery(filters: OrchidListFilters) {
+  const params: Array<number | string> = [];
+  const whereClauses: string[] = [];
+
+  if (filters.q) {
+    params.push(`%${filters.q}%`);
+    whereClauses.push(`(
+      orchids.common_name ILIKE $${params.length}
+      OR orchids.scientific_name ILIKE $${params.length}
+      OR orchids.genus ILIKE $${params.length}
+      OR orchids.short_description ILIKE $${params.length}
+      OR orchid_care_profiles.potting_medium ILIKE $${params.length}
+      OR orchid_care_profiles.bloom_notes ILIKE $${params.length}
+      OR orchid_care_profiles.care_summary ILIKE $${params.length}
+    )`);
+  }
+
+  if (filters.difficulty) {
+    params.push(filters.difficulty);
+    whereClauses.push(`orchid_care_profiles.difficulty = $${params.length}`);
+  }
+
+  if (filters.light) {
+    params.push(filters.light);
+    whereClauses.push(`orchid_care_profiles.light_needs = $${params.length}`);
+  }
+
+  if (filters.water) {
+    params.push(filters.water);
+    whereClauses.push(`orchid_care_profiles.watering_needs = $${params.length}`);
+  }
+
+  if (typeof filters.humidity === "number") {
+    params.push(filters.humidity);
+    whereClauses.push(`$${params.length} BETWEEN orchid_care_profiles.humidity_min_percent
+      AND orchid_care_profiles.humidity_max_percent`);
+  }
+
+  if (typeof filters.temperature === "number") {
+    params.push(filters.temperature);
+    whereClauses.push(`$${params.length} BETWEEN orchid_care_profiles.temperature_min_celsius
+      AND orchid_care_profiles.temperature_max_celsius`);
+  }
+
+  if (filters.growthType) {
+    params.push(filters.growthType);
+    whereClauses.push(`orchids.growth_type = $${params.length}`);
+  }
+
+  if (filters.bloomSeason) {
+    params.push(filters.bloomSeason);
+    whereClauses.push(`orchid_care_profiles.bloom_season = $${params.length}`);
+  }
+
+  return {
+    params,
+    whereSql: whereClauses.length > 0 ? `WHERE ${whereClauses.join(" AND ")}` : "",
   };
 }
 
