@@ -1,9 +1,9 @@
 import type { Pool } from "pg";
 
-import type { OrchidListItem } from "./orchid.types.js";
+import type { OrchidListFilters, OrchidListItem } from "./orchid.types.js";
 
 export type OrchidRepository = {
-  listOrchids: () => Promise<OrchidListItem[]>;
+  listOrchids: (filters?: OrchidListFilters) => Promise<OrchidListItem[]>;
 };
 
 type OrchidListRow = {
@@ -23,8 +23,64 @@ type OrchidListRow = {
 
 export function createOrchidRepository(pool: Pool): OrchidRepository {
   return {
-    async listOrchids() {
-      const result = await pool.query<OrchidListRow>(`
+    async listOrchids(filters = {}) {
+      const params: Array<number | string> = [];
+      const whereClauses: string[] = [];
+
+      if (filters.q) {
+        params.push(`%${filters.q}%`);
+        whereClauses.push(`(
+          orchids.common_name ILIKE $${params.length}
+          OR orchids.scientific_name ILIKE $${params.length}
+          OR orchids.genus ILIKE $${params.length}
+          OR orchids.short_description ILIKE $${params.length}
+          OR orchid_care_profiles.potting_medium ILIKE $${params.length}
+          OR orchid_care_profiles.bloom_notes ILIKE $${params.length}
+          OR orchid_care_profiles.care_summary ILIKE $${params.length}
+        )`);
+      }
+
+      if (filters.difficulty) {
+        params.push(filters.difficulty);
+        whereClauses.push(`orchid_care_profiles.difficulty = $${params.length}`);
+      }
+
+      if (filters.light) {
+        params.push(filters.light);
+        whereClauses.push(`orchid_care_profiles.light_needs = $${params.length}`);
+      }
+
+      if (filters.water) {
+        params.push(filters.water);
+        whereClauses.push(`orchid_care_profiles.watering_needs = $${params.length}`);
+      }
+
+      if (typeof filters.humidity === "number") {
+        params.push(filters.humidity);
+        whereClauses.push(`$${params.length} BETWEEN orchid_care_profiles.humidity_min_percent
+          AND orchid_care_profiles.humidity_max_percent`);
+      }
+
+      if (typeof filters.temperature === "number") {
+        params.push(filters.temperature);
+        whereClauses.push(`$${params.length} BETWEEN orchid_care_profiles.temperature_min_celsius
+          AND orchid_care_profiles.temperature_max_celsius`);
+      }
+
+      if (filters.growthType) {
+        params.push(filters.growthType);
+        whereClauses.push(`orchids.growth_type = $${params.length}`);
+      }
+
+      if (filters.bloomSeason) {
+        params.push(filters.bloomSeason);
+        whereClauses.push(`orchid_care_profiles.bloom_season = $${params.length}`);
+      }
+
+      const whereSql = whereClauses.length > 0 ? `WHERE ${whereClauses.join(" AND ")}` : "";
+
+      const result = await pool.query<OrchidListRow>(
+        `
         SELECT
           orchids.slug,
           orchids.common_name,
@@ -40,8 +96,11 @@ export function createOrchidRepository(pool: Pool): OrchidRepository {
           orchids.image_alt
         FROM orchids
         INNER JOIN orchid_care_profiles ON orchid_care_profiles.orchid_id = orchids.id
+        ${whereSql}
         ORDER BY orchids.common_name ASC
-      `);
+      `,
+        params,
+      );
 
       return result.rows.map(mapOrchidListRow);
     },

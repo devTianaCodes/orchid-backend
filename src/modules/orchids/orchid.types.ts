@@ -23,6 +23,17 @@ export type OrchidListItem = {
   imageAlt: string | null;
 };
 
+export type OrchidListFilters = {
+  q?: string;
+  difficulty?: OrchidDifficulty;
+  light?: OrchidLightNeeds;
+  water?: OrchidWateringNeeds;
+  humidity?: number;
+  temperature?: number;
+  growthType?: OrchidGrowthType;
+  bloomSeason?: OrchidBloomSeason;
+};
+
 export type OrchidListResponse = {
   orchids: OrchidListItem[];
 };
