@@ -13,3 +13,4 @@ const orchidController = createOrchidController(orchidService);
 export const orchidRouter = express.Router();
 
 orchidRouter.get("/", asyncHandler(orchidController.listOrchids));
+orchidRouter.get("/:slug", asyncHandler(orchidController.getOrchidBySlug));

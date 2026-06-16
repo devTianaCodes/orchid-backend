@@ -1,8 +1,13 @@
 import type { OrchidRepository } from "./orchid.repository.js";
-import type { OrchidListFilters, OrchidListResponse } from "./orchid.types.js";
+import type {
+  OrchidDetailResponse,
+  OrchidListFilters,
+  OrchidListResponse,
+} from "./orchid.types.js";
 
 export type OrchidService = {
   listOrchids: (filters?: OrchidListFilters) => Promise<OrchidListResponse>;
+  getOrchidBySlug: (slug: string) => Promise<OrchidDetailResponse | null>;
 };
 
 export function createOrchidService(repository: OrchidRepository): OrchidService {
@@ -11,6 +16,12 @@ export function createOrchidService(repository: OrchidRepository): OrchidService
       const orchids = await repository.listOrchids(filters);
 
       return { orchids };
+    },
+
+    async getOrchidBySlug(slug) {
+      const orchid = await repository.findOrchidBySlug(slug);
+
+      return orchid ? { orchid } : null;
     },
   };
 }

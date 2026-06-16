@@ -23,6 +23,20 @@ export type OrchidListItem = {
   imageAlt: string | null;
 };
 
+export type OrchidDetail = OrchidListItem & {
+  nativeRegion: string;
+  humidityMinPercent: number;
+  humidityMaxPercent: number;
+  temperatureMinCelsius: number;
+  temperatureMaxCelsius: number;
+  pottingMedium: string;
+  bloomNotes: string;
+  careSummary: string;
+  imageSourceUrl: string | null;
+  imageLicense: string | null;
+  imageAttribution: string | null;
+};
+
 export type OrchidListFilters = {
   q?: string;
   difficulty?: OrchidDifficulty;
@@ -36,4 +50,8 @@ export type OrchidListFilters = {
 
 export type OrchidListResponse = {
   orchids: OrchidListItem[];
+};
+
+export type OrchidDetailResponse = {
+  orchid: OrchidDetail;
 };

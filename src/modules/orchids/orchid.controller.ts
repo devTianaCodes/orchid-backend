@@ -18,6 +18,7 @@ type OrchidRequestHandler = (
 
 export type OrchidController = {
   listOrchids: OrchidRequestHandler;
+  getOrchidBySlug: OrchidRequestHandler;
 };
 
 export function createOrchidController(service: OrchidService): OrchidController {
@@ -38,6 +39,34 @@ export function createOrchidController(service: OrchidService): OrchidController
       const orchids = await service.listOrchids(filters);
 
       response.json(orchids);
+    },
+
+    async getOrchidBySlug(request, response) {
+      const slug = getRouteParamValue(request.params.slug);
+
+      if (!slug || !isValidSlug(slug)) {
+        response.status(400).json({
+          error: {
+            message: "Invalid orchid slug",
+          },
+        });
+
+        return;
+      }
+
+      const orchid = await service.getOrchidBySlug(slug);
+
+      if (!orchid) {
+        response.status(404).json({
+          error: {
+            message: `Orchid not found: ${slug}`,
+          },
+        });
+
+        return;
+      }
+
+      response.json(orchid);
     },
   };
 }
@@ -145,6 +174,10 @@ function getSingleQueryValue(value: Request["query"][string]): string | undefine
   return undefined;
 }
 
+function getRouteParamValue(value: string | string[]): string | undefined {
+  return Array.isArray(value) ? value[0] : value;
+}
+
 function isOneOf<TValue extends string>(
   value: string,
   validValues: readonly TValue[],
@@ -169,4 +202,8 @@ function parseNumberQueryValue(
   }
 
   return { value: parsedValue };
+}
+
+function isValidSlug(slug: string) {
+  return /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug);
 }
