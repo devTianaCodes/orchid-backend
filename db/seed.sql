@@ -575,6 +575,146 @@ WITH seeded_orchids AS (
       'https://commons.wikimedia.org/wiki/File:Phaius_tankervilleae_-_Flickr_003.jpg',
       'CC BY 2.0',
       'Elena Gaillard, via Wikimedia Commons'
+    ),
+    (
+      'elizabeth-ann-bulbophyllum',
+      'Elizabeth Ann Bulbophyllum',
+      'Cirrhopetalum Elizabeth Ann',
+      'Cirrhopetalum',
+      'A dramatic hybrid orchid with pendant umbels of long, ribbon-like flowers.',
+      'Cultivated hybrid',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/b/b3/A_and_B_Larsen_orchids_-_Cirrhopetalum_Elizabeth_Ann_Bucklebury_690-3.jpg',
+      'Cirrhopetalum Elizabeth Ann orchid with long pendant reddish flowers.',
+      'https://commons.wikimedia.org/wiki/File:A_and_B_Larsen_orchids_-_Cirrhopetalum_Elizabeth_Ann_Bucklebury_690-3.jpg',
+      'CC BY-SA 2.5 DK',
+      'Arne and Bent Larsen, via Wikimedia Commons'
+    ),
+    (
+      'terete-vanda',
+      'Terete Vanda',
+      'Papilionanthe teres',
+      'Papilionanthe',
+      'A sun-loving vandaceous orchid with pencil-like leaves and pink flowers.',
+      'South and Southeast Asia',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/e/ea/Plant_Orchid_Papilionanthe_teres_IMG_8643_03.jpg',
+      'Papilionanthe teres orchid flower with pink petals and terete foliage.',
+      'https://commons.wikimedia.org/wiki/File:Plant_Orchid_Papilionanthe_teres_IMG_8643_03.jpg',
+      'CC BY-SA 4.0',
+      'Rohit Naniwadekar, via Wikimedia Commons'
+    ),
+    (
+      'scarlet-cochlioda',
+      'Scarlet Cochlioda',
+      'Oncidium noezlianum',
+      'Oncidium',
+      'A cool-growing Andean orchid with vivid orange-red flowers.',
+      'Peru and Bolivia',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/f/f5/Oncidium_noezlianum_%28Mast.%29_M.W.Chase_%26_N.H.Williams_in_Lindleyana_21%283%29-_25_%282008%29_20241212_230500.jpg',
+      'Orange-red Oncidium noezlianum orchid flowers.',
+      'https://commons.wikimedia.org/wiki/File:Oncidium_noezlianum_(Mast.)_M.W.Chase_%26_N.H.Williams_in_Lindleyana_21(3)-_25_(2008)_20241212_230500.jpg',
+      'CC BY 4.0',
+      'Motohiro Sunouchi, via Wikimedia Commons'
+    ),
+    (
+      'tracys-cymbidium',
+      'Tracy''s Cymbidium',
+      'Cymbidium tracyanum',
+      'Cymbidium',
+      'A fragrant cymbidium with arching sprays of large striped flowers.',
+      'China, Myanmar, and Thailand',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/a/a8/Tracy%E2%80%99s_Cymbidium_%28Cymbidium_tracyanum%29.jpg',
+      'Cymbidium tracyanum orchid flowers with striped yellow-green petals.',
+      'https://commons.wikimedia.org/wiki/File:Tracy%E2%80%99s_Cymbidium_(Cymbidium_tracyanum).jpg',
+      'CC0',
+      'Deja Bayor Neba, via Wikimedia Commons'
+    ),
+    (
+      'swan-orchid',
+      'Swan Orchid',
+      'Cycnoches chlorochilon',
+      'Cycnoches',
+      'A deciduous orchid with unusual swan-like flowers and a seasonal dry rest.',
+      'Central and South America',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/1/1f/R._Warner_%26_B.S._Williams_-_The_Orchid_Album_-_volume_06_-_plate_263_%281887%29.jpg',
+      'Botanical illustration of Cycnoches chlorochilon swan orchid flowers.',
+      'https://commons.wikimedia.org/wiki/File:R._Warner_%26_B.S._Williams_-_The_Orchid_Album_-_volume_06_-_plate_263_(1887).jpg',
+      'Public domain',
+      'Unknown author, via Wikimedia Commons'
+    ),
+    (
+      'galeandra-orchid',
+      'Galeandra Orchid',
+      'Galeandra baueri',
+      'Galeandra',
+      'A warm-growing orchid with hooded flowers and a seasonal growth rhythm.',
+      'Central and South America',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/e/ec/Ogr%C3%B3d_Botaniczny_UJ_w_Krakowie_108.JPG',
+      'Galeandra baueri orchid flower with a hooded lip.',
+      'https://commons.wikimedia.org/wiki/File:Ogr%C3%B3d_Botaniczny_UJ_w_Krakowie_108.JPG',
+      'CC BY-SA 3.0',
+      'Raphael17, via Wikimedia Commons'
+    ),
+    (
+      'antenna-restrepia',
+      'Antenna Restrepia',
+      'Restrepia antennifera',
+      'Restrepia',
+      'A cool cloud-forest orchid with small striped flowers and antenna-like petals.',
+      'Colombia, Ecuador, Peru, and Venezuela',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/9/94/Restrepia_antennifera_Kunth_in_F.W.H.von_Humboldt%2C_A.J.A.Bonpland_%26_C.S.Kunth%2C_Nov._Gen._Sp._1_367_%281816%29_%2827438858628%29.jpg',
+      'Restrepia antennifera orchid flower with striped segments and antenna-like petals.',
+      'https://commons.wikimedia.org/wiki/File:Restrepia_antennifera_Kunth_in_F.W.H.von_Humboldt,_A.J.A.Bonpland_%26_C.S.Kunth,_Nov._Gen._Sp._1_367_(1816)_(27438858628).jpg',
+      'CC BY 2.0',
+      'Snotch, via Wikimedia Commons'
+    ),
+    (
+      'silver-stelis',
+      'Silver Stelis',
+      'Stelis argentata',
+      'Stelis',
+      'A miniature orchid with many tiny flowers held on slender inflorescences.',
+      'Central and South America',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/6/65/Stelis_argentata_-_Flickr_003.jpg',
+      'Stelis argentata orchid with tiny flowers on a slender spike.',
+      'https://commons.wikimedia.org/wiki/File:Stelis_argentata_-_Flickr_003.jpg',
+      'CC BY-SA 2.0',
+      'Derek Keats, via Wikimedia Commons'
+    ),
+    (
+      'grobyi-specklinia',
+      'Grobyi Specklinia',
+      'Specklinia grobyi',
+      'Specklinia',
+      'A small pleurothallid orchid with delicate flowers on compact growths.',
+      'Central America and northern South America',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/5/56/Specklinia_grobyi_1.jpg',
+      'Specklinia grobyi orchid flower on a compact plant.',
+      'https://commons.wikimedia.org/wiki/File:Specklinia_grobyi_1.jpg',
+      'CC BY-SA 3.0',
+      'Franz Xaver, via Wikimedia Commons'
+    ),
+    (
+      'comparettia-orchid',
+      'Comparettia Orchid',
+      'Comparettia speciosa',
+      'Comparettia',
+      'A compact orchid with bright orange flowers and a pendant growth habit.',
+      'Colombia and Ecuador',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/4/42/A_and_B_Larsen_orchids_-_Comparettia_speciosa_847-2.jpg',
+      'Comparettia speciosa orchid with bright orange flowers.',
+      'https://commons.wikimedia.org/wiki/File:A_and_B_Larsen_orchids_-_Comparettia_speciosa_847-2.jpg',
+      'CC BY-SA 2.5 DK',
+      'Arne and Bent Larsen, via Wikimedia Commons'
     )
   RETURNING id, slug
 )
@@ -635,6 +775,16 @@ SELECT
     WHEN 'twisted-trichopilia' THEN 'intermediate'
     WHEN 'cobb-dendrochilum' THEN 'intermediate'
     WHEN 'nun-orchid' THEN 'beginner'
+    WHEN 'elizabeth-ann-bulbophyllum' THEN 'advanced'
+    WHEN 'terete-vanda' THEN 'advanced'
+    WHEN 'scarlet-cochlioda' THEN 'advanced'
+    WHEN 'tracys-cymbidium' THEN 'intermediate'
+    WHEN 'swan-orchid' THEN 'advanced'
+    WHEN 'galeandra-orchid' THEN 'intermediate'
+    WHEN 'antenna-restrepia' THEN 'advanced'
+    WHEN 'silver-stelis' THEN 'advanced'
+    WHEN 'grobyi-specklinia' THEN 'intermediate'
+    WHEN 'comparettia-orchid' THEN 'intermediate'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'bright-indirect'
@@ -677,6 +827,16 @@ SELECT
     WHEN 'twisted-trichopilia' THEN 'bright-indirect'
     WHEN 'cobb-dendrochilum' THEN 'bright-indirect'
     WHEN 'nun-orchid' THEN 'bright-indirect'
+    WHEN 'elizabeth-ann-bulbophyllum' THEN 'medium'
+    WHEN 'terete-vanda' THEN 'high'
+    WHEN 'scarlet-cochlioda' THEN 'medium'
+    WHEN 'tracys-cymbidium' THEN 'bright-indirect'
+    WHEN 'swan-orchid' THEN 'bright-indirect'
+    WHEN 'galeandra-orchid' THEN 'bright-indirect'
+    WHEN 'antenna-restrepia' THEN 'medium'
+    WHEN 'silver-stelis' THEN 'medium'
+    WHEN 'grobyi-specklinia' THEN 'medium'
+    WHEN 'comparettia-orchid' THEN 'bright-indirect'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'moderate'
@@ -719,6 +879,16 @@ SELECT
     WHEN 'twisted-trichopilia' THEN 'moderate'
     WHEN 'cobb-dendrochilum' THEN 'moderate'
     WHEN 'nun-orchid' THEN 'moderate'
+    WHEN 'elizabeth-ann-bulbophyllum' THEN 'frequent'
+    WHEN 'terete-vanda' THEN 'frequent'
+    WHEN 'scarlet-cochlioda' THEN 'frequent'
+    WHEN 'tracys-cymbidium' THEN 'moderate'
+    WHEN 'swan-orchid' THEN 'moderate'
+    WHEN 'galeandra-orchid' THEN 'moderate'
+    WHEN 'antenna-restrepia' THEN 'frequent'
+    WHEN 'silver-stelis' THEN 'frequent'
+    WHEN 'grobyi-specklinia' THEN 'moderate'
+    WHEN 'comparettia-orchid' THEN 'moderate'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 50
@@ -761,6 +931,16 @@ SELECT
     WHEN 'twisted-trichopilia' THEN 55
     WHEN 'cobb-dendrochilum' THEN 55
     WHEN 'nun-orchid' THEN 50
+    WHEN 'elizabeth-ann-bulbophyllum' THEN 70
+    WHEN 'terete-vanda' THEN 60
+    WHEN 'scarlet-cochlioda' THEN 70
+    WHEN 'tracys-cymbidium' THEN 50
+    WHEN 'swan-orchid' THEN 50
+    WHEN 'galeandra-orchid' THEN 55
+    WHEN 'antenna-restrepia' THEN 75
+    WHEN 'silver-stelis' THEN 75
+    WHEN 'grobyi-specklinia' THEN 65
+    WHEN 'comparettia-orchid' THEN 60
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 70
@@ -803,6 +983,16 @@ SELECT
     WHEN 'twisted-trichopilia' THEN 80
     WHEN 'cobb-dendrochilum' THEN 80
     WHEN 'nun-orchid' THEN 80
+    WHEN 'elizabeth-ann-bulbophyllum' THEN 90
+    WHEN 'terete-vanda' THEN 85
+    WHEN 'scarlet-cochlioda' THEN 90
+    WHEN 'tracys-cymbidium' THEN 75
+    WHEN 'swan-orchid' THEN 75
+    WHEN 'galeandra-orchid' THEN 80
+    WHEN 'antenna-restrepia' THEN 90
+    WHEN 'silver-stelis' THEN 90
+    WHEN 'grobyi-specklinia' THEN 85
+    WHEN 'comparettia-orchid' THEN 85
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 18
@@ -845,6 +1035,16 @@ SELECT
     WHEN 'twisted-trichopilia' THEN 16
     WHEN 'cobb-dendrochilum' THEN 16
     WHEN 'nun-orchid' THEN 16
+    WHEN 'elizabeth-ann-bulbophyllum' THEN 18
+    WHEN 'terete-vanda' THEN 20
+    WHEN 'scarlet-cochlioda' THEN 10
+    WHEN 'tracys-cymbidium' THEN 10
+    WHEN 'swan-orchid' THEN 18
+    WHEN 'galeandra-orchid' THEN 18
+    WHEN 'antenna-restrepia' THEN 10
+    WHEN 'silver-stelis' THEN 10
+    WHEN 'grobyi-specklinia' THEN 14
+    WHEN 'comparettia-orchid' THEN 16
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 29
@@ -887,6 +1087,16 @@ SELECT
     WHEN 'twisted-trichopilia' THEN 28
     WHEN 'cobb-dendrochilum' THEN 28
     WHEN 'nun-orchid' THEN 30
+    WHEN 'elizabeth-ann-bulbophyllum' THEN 30
+    WHEN 'terete-vanda' THEN 34
+    WHEN 'scarlet-cochlioda' THEN 24
+    WHEN 'tracys-cymbidium' THEN 26
+    WHEN 'swan-orchid' THEN 30
+    WHEN 'galeandra-orchid' THEN 30
+    WHEN 'antenna-restrepia' THEN 22
+    WHEN 'silver-stelis' THEN 24
+    WHEN 'grobyi-specklinia' THEN 26
+    WHEN 'comparettia-orchid' THEN 28
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Medium bark mix with good drainage and airflow.'
@@ -929,6 +1139,16 @@ SELECT
     WHEN 'twisted-trichopilia' THEN 'Medium bark mix with moisture retention and steady airflow.'
     WHEN 'cobb-dendrochilum' THEN 'Fine to medium bark mix with steady moisture and good drainage.'
     WHEN 'nun-orchid' THEN 'Rich terrestrial orchid mix with drainage and moisture retention.'
+    WHEN 'elizabeth-ann-bulbophyllum' THEN 'Basket or fine bark mix with high humidity and excellent airflow.'
+    WHEN 'terete-vanda' THEN 'Open basket, mounted culture, or very coarse bark for fast root drying.'
+    WHEN 'scarlet-cochlioda' THEN 'Fine bark mix kept cool, moist, and airy.'
+    WHEN 'tracys-cymbidium' THEN 'Medium bark mix with drainage and a cooler seasonal rest.'
+    WHEN 'swan-orchid' THEN 'Medium bark mix that supports heavy watering in growth and a dry rest.'
+    WHEN 'galeandra-orchid' THEN 'Medium bark mix with a drier rest after seasonal growth matures.'
+    WHEN 'antenna-restrepia' THEN 'Fine bark or sphagnum-based mix kept cool, humid, and airy.'
+    WHEN 'silver-stelis' THEN 'Fine bark or mounted culture with constant humidity and airflow.'
+    WHEN 'grobyi-specklinia' THEN 'Fine bark, mounted culture, or small airy pot with steady humidity.'
+    WHEN 'comparettia-orchid' THEN 'Mounted culture or fine bark with quick drainage and high humidity.'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'varies'
@@ -971,6 +1191,16 @@ SELECT
     WHEN 'twisted-trichopilia' THEN 'spring'
     WHEN 'cobb-dendrochilum' THEN 'spring'
     WHEN 'nun-orchid' THEN 'spring'
+    WHEN 'elizabeth-ann-bulbophyllum' THEN 'varies'
+    WHEN 'terete-vanda' THEN 'summer'
+    WHEN 'scarlet-cochlioda' THEN 'winter'
+    WHEN 'tracys-cymbidium' THEN 'autumn'
+    WHEN 'swan-orchid' THEN 'summer'
+    WHEN 'galeandra-orchid' THEN 'summer'
+    WHEN 'antenna-restrepia' THEN 'varies'
+    WHEN 'silver-stelis' THEN 'varies'
+    WHEN 'grobyi-specklinia' THEN 'varies'
+    WHEN 'comparettia-orchid' THEN 'spring'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Can bloom indoors for several months when kept warm and evenly cared for.'
@@ -1013,6 +1243,16 @@ SELECT
     WHEN 'twisted-trichopilia' THEN 'Fragrant flowers have twisted segments and a wide decorative lip.'
     WHEN 'cobb-dendrochilum' THEN 'Arching chains carry many small flowers from compact growths.'
     WHEN 'nun-orchid' THEN 'Tall spikes emerge from large pleated leaves and carry broad flowers.'
+    WHEN 'elizabeth-ann-bulbophyllum' THEN 'Long ribbon-like flowers hang in dramatic umbels from compact growths.'
+    WHEN 'terete-vanda' THEN 'Pink flowers open on sun-grown canes with pencil-like terete leaves.'
+    WHEN 'scarlet-cochlioda' THEN 'Bright orange-red flowers prefer cool, humid conditions.'
+    WHEN 'tracys-cymbidium' THEN 'Fragrant striped flowers open on arching spikes from mature pseudobulbs.'
+    WHEN 'swan-orchid' THEN 'Unusual swan-like flowers follow strong seasonal growth and a dry rest.'
+    WHEN 'galeandra-orchid' THEN 'Hooded flowers appear during warm active growth.'
+    WHEN 'antenna-restrepia' THEN 'Small striped flowers appear from leaf bases in cool humid conditions.'
+    WHEN 'silver-stelis' THEN 'Tiny flowers line slender spikes and reward stable humidity.'
+    WHEN 'grobyi-specklinia' THEN 'Small delicate flowers appear on compact pleurothallid growths.'
+    WHEN 'comparettia-orchid' THEN 'Bright orange flowers can arch or hang from compact plants.'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Keep warm in bright indirect light, water when the bark is nearly dry, and avoid water sitting in the crown.'
@@ -1055,6 +1295,16 @@ SELECT
     WHEN 'twisted-trichopilia' THEN 'Provide intermediate warmth, bright shade, steady humidity, and a lightly moist bark mix.'
     WHEN 'cobb-dendrochilum' THEN 'Grow in bright filtered light with steady moisture and avoid letting fine roots dry hard.'
     WHEN 'nun-orchid' THEN 'Grow warm in bright shade with regular water during growth and a lighter winter rest.'
+    WHEN 'elizabeth-ann-bulbophyllum' THEN 'Keep warm, shaded, very humid, and airy, watering before the fine roots dry hard.'
+    WHEN 'terete-vanda' THEN 'Give very high light, warmth, humidity, and frequent watering with fast root drying.'
+    WHEN 'scarlet-cochlioda' THEN 'Grow cool and humid in moderate light with evenly moist media and strong airflow.'
+    WHEN 'tracys-cymbidium' THEN 'Grow bright and cool with thorough watering in growth and reduced water after blooming.'
+    WHEN 'swan-orchid' THEN 'Water and feed heavily during leafy growth, then give a drier rest after leaves drop.'
+    WHEN 'galeandra-orchid' THEN 'Grow warm with bright filtered light, regular water in growth, and a lighter dry rest.'
+    WHEN 'antenna-restrepia' THEN 'Keep cool, shaded, humid, and evenly moist with constant gentle airflow.'
+    WHEN 'silver-stelis' THEN 'Grow cool to intermediate in shade with high humidity and steady moisture.'
+    WHEN 'grobyi-specklinia' THEN 'Provide shaded intermediate conditions, high humidity, and a small airy root zone.'
+    WHEN 'comparettia-orchid' THEN 'Grow mounted or in a small airy pot with bright shade, humidity, and quick drainage.'
   END
 FROM seeded_orchids;
 
