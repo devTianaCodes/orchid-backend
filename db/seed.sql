@@ -500,11 +500,11 @@ WITH seeded_orchids AS (
       'A small terrestrial orchid whose white fringed flowers resemble flying egrets.',
       'Japan, Korea, China, and eastern Russia',
       'terrestrial',
-      'https://upload.wikimedia.org/wikipedia/commons/4/44/A_and_B_Larsen_orchids_-_Habenaria_radiata.jpg',
-      'White Habenaria radiata egret orchid flowers with fringed petals.',
-      'https://commons.wikimedia.org/wiki/File:A_and_B_Larsen_orchids_-_Habenaria_radiata.jpg',
-      'CC BY-SA 2.5 DK',
-      'Arne and Bent Larsen, via Wikimedia Commons'
+      'https://upload.wikimedia.org/wikipedia/commons/e/e7/Pecteilis_radiata_%28flower%29.jpg',
+      'Close view of a white Pecteilis radiata egret orchid flower with fringed petals.',
+      'https://commons.wikimedia.org/wiki/File:Pecteilis_radiata_(flower).jpg',
+      'CC BY-SA 4.0',
+      'Alpsdake, via Wikimedia Commons'
     ),
     (
       'odontoglossum-orchid',
@@ -715,6 +715,146 @@ WITH seeded_orchids AS (
       'https://commons.wikimedia.org/wiki/File:A_and_B_Larsen_orchids_-_Comparettia_speciosa_847-2.jpg',
       'CC BY-SA 2.5 DK',
       'Arne and Bent Larsen, via Wikimedia Commons'
+    ),
+    (
+      'lady-of-the-night-orchid',
+      'Lady of the Night Orchid',
+      'Brassavola nodosa',
+      'Brassavola',
+      'A fragrant orchid known for narrow white flowers that release scent at night.',
+      'Mexico, Central America, the Caribbean, and northern South America',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/6/62/Brassavola_nodosa_orchid.png',
+      'White Brassavola nodosa orchid flowers with narrow petals and a broad lip.',
+      'https://commons.wikimedia.org/wiki/File:Brassavola_nodosa_orchid.png',
+      'CC BY-SA 4.0',
+      'Gaussian_venation, via Wikimedia Commons'
+    ),
+    (
+      'scaphosepalum-orchid',
+      'Scaphosepalum Orchid',
+      'Scaphosepalum swertifolium',
+      'Scaphosepalum',
+      'A cool-growing miniature orchid with unusual small flowers from humid forests.',
+      'Central America and northern South America',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/f/f3/Scaphosepalum_swertifolium.jpeg',
+      'Scaphosepalum swertifolium orchid flowers with narrow tails.',
+      'https://commons.wikimedia.org/wiki/File:Scaphosepalum_swertifolium.jpeg',
+      'CC BY-SA 2.5',
+      'Brett Francis (Oort), via Wikimedia Commons'
+    ),
+    (
+      'purple-ground-orchid',
+      'Purple Ground Orchid',
+      'Spathoglottis plicata',
+      'Spathoglottis',
+      'A tropical terrestrial orchid with pleated leaves and upright purple flower spikes.',
+      'Tropical and subtropical Asia to Australia and the western Pacific',
+      'terrestrial',
+      'https://upload.wikimedia.org/wikipedia/commons/e/e1/Spathoglottis_plicata_%28Philippine_ground_orchid%29_1.jpg',
+      'Purple Spathoglottis plicata ground orchid flowers on an upright stem.',
+      'https://commons.wikimedia.org/wiki/File:Spathoglottis_plicata_(Philippine_ground_orchid)_1.jpg',
+      'CC0',
+      'Obsidian Soul, via Wikimedia Commons'
+    ),
+    (
+      'giant-arpophyllum',
+      'Giant Arpophyllum',
+      'Arpophyllum giganteum',
+      'Arpophyllum',
+      'A robust orchid with strap-like leaves and dense purple-pink flower spikes.',
+      'Mexico, Central America, northern South America, and Jamaica',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/0/0b/Arpophyllum_giganteum_0zz.jpg',
+      'Arpophyllum giganteum orchid with a dense purple-pink flower spike.',
+      'https://commons.wikimedia.org/wiki/File:Arpophyllum_giganteum_0zz.jpg',
+      'CC BY-SA 4.0',
+      'Photo by David J. Stang, via Wikimedia Commons'
+    ),
+    (
+      'red-vanda',
+      'Red Vanda',
+      'Renanthera imschootiana',
+      'Renanthera',
+      'A rare vandaceous orchid valued for vivid red-orange flowers and warm bright culture.',
+      'Eastern Himalaya, southeastern China, and Vietnam',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/f/f6/Renanthera_%28imschootiana_x_kilauea%29.jpg',
+      'Red-orange Renanthera orchid flowers on a branching stem.',
+      'https://commons.wikimedia.org/wiki/File:Renanthera_(imschootiana_x_kilauea).jpg',
+      'CC BY 2.0',
+      'scott.zona, via Wikimedia Commons'
+    ),
+    (
+      'roezls-miltoniopsis',
+      'Roezl''s Miltoniopsis',
+      'Miltoniopsis roezlii',
+      'Miltoniopsis',
+      'A pansy orchid species with broad patterned flowers from humid Andean habitats.',
+      'Colombia, Ecuador, Peru, and Panama',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/f/f1/The_Orchid_Album-02-0051-0064-Odontoglossum_roezlii-crop.png',
+      'Botanical illustration of Miltoniopsis roezlii orchid flowers.',
+      'https://commons.wikimedia.org/wiki/File:The_Orchid_Album-02-0051-0064-Odontoglossum_roezlii-crop.png',
+      'Public domain',
+      'John Nugent Fitch, via Wikimedia Commons'
+    ),
+    (
+      'peters-eulophia',
+      'Peter''s Eulophia',
+      'Eulophia petersii',
+      'Eulophia',
+      'A heat-tolerant terrestrial orchid adapted to bright, seasonally dry habitats.',
+      'Eastern and southern Africa and the Arabian Peninsula',
+      'terrestrial',
+      'https://upload.wikimedia.org/wikipedia/commons/2/24/Eulophia_petersii_flower.jpg',
+      'Eulophia petersii orchid flower with green and purple markings.',
+      'https://commons.wikimedia.org/wiki/File:Eulophia_petersii_flower.jpg',
+      'CC BY-SA 2.0',
+      'Ton Rulkens from Mozambique, via Wikimedia Commons'
+    ),
+    (
+      'mini-erycina',
+      'Mini Erycina',
+      'Erycina pusilla',
+      'Erycina',
+      'A very small twig epiphyte with cheerful yellow flowers and fine roots.',
+      'Central America and northern South America',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/0/01/Erycina_Pusilla.jpg',
+      'Small yellow Erycina pusilla orchid flowers on a compact plant.',
+      'https://commons.wikimedia.org/wiki/File:Erycina_Pusilla.jpg',
+      'CC BY-SA 4.0',
+      'Vanes8123, via Wikimedia Commons'
+    ),
+    (
+      'bamboo-orchid',
+      'Bamboo Orchid',
+      'Arundina graminifolia',
+      'Arundina',
+      'A tall terrestrial orchid with reed-like stems and bright pink flowers.',
+      'South Asia, Southeast Asia, and parts of the Pacific',
+      'terrestrial',
+      'https://upload.wikimedia.org/wikipedia/commons/3/35/Arundina_graminifolia_at_Kadavoor.jpg',
+      'Pink Arundina graminifolia bamboo orchid flower on a tall reed-like stem.',
+      'https://commons.wikimedia.org/wiki/File:Arundina_graminifolia_at_Kadavoor.jpg',
+      'CC BY-SA 4.0',
+      'Jeevan Jose, Kerala, India, via Wikimedia Commons'
+    ),
+    (
+      'cooper-cycnoches',
+      'Cooper''s Cycnoches',
+      'Cycnoches cooperi',
+      'Cycnoches',
+      'A deciduous orchid with dramatic waxy flowers and a pronounced seasonal rest.',
+      'Peru and nearby Amazonian regions',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/f/f6/Cycnoches_cooperi_%2814300697305%29_-_cropped_2.jpg',
+      'Cycnoches cooperi orchid flowers with waxy green and bronze tones.',
+      'https://commons.wikimedia.org/wiki/File:Cycnoches_cooperi_(14300697305)_-_cropped_2.jpg',
+      'CC BY-SA 2.0',
+      'Alejandro Bayer Tamayo from Armenia, Colombia, via Wikimedia Commons'
     )
   RETURNING id, slug
 )
@@ -785,6 +925,16 @@ SELECT
     WHEN 'silver-stelis' THEN 'advanced'
     WHEN 'grobyi-specklinia' THEN 'intermediate'
     WHEN 'comparettia-orchid' THEN 'intermediate'
+    WHEN 'lady-of-the-night-orchid' THEN 'intermediate'
+    WHEN 'scaphosepalum-orchid' THEN 'advanced'
+    WHEN 'purple-ground-orchid' THEN 'beginner'
+    WHEN 'giant-arpophyllum' THEN 'intermediate'
+    WHEN 'red-vanda' THEN 'advanced'
+    WHEN 'roezls-miltoniopsis' THEN 'advanced'
+    WHEN 'peters-eulophia' THEN 'intermediate'
+    WHEN 'mini-erycina' THEN 'intermediate'
+    WHEN 'bamboo-orchid' THEN 'beginner'
+    WHEN 'cooper-cycnoches' THEN 'advanced'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'bright-indirect'
@@ -837,6 +987,16 @@ SELECT
     WHEN 'silver-stelis' THEN 'medium'
     WHEN 'grobyi-specklinia' THEN 'medium'
     WHEN 'comparettia-orchid' THEN 'bright-indirect'
+    WHEN 'lady-of-the-night-orchid' THEN 'high'
+    WHEN 'scaphosepalum-orchid' THEN 'medium'
+    WHEN 'purple-ground-orchid' THEN 'bright-indirect'
+    WHEN 'giant-arpophyllum' THEN 'bright-indirect'
+    WHEN 'red-vanda' THEN 'high'
+    WHEN 'roezls-miltoniopsis' THEN 'medium'
+    WHEN 'peters-eulophia' THEN 'high'
+    WHEN 'mini-erycina' THEN 'bright-indirect'
+    WHEN 'bamboo-orchid' THEN 'high'
+    WHEN 'cooper-cycnoches' THEN 'bright-indirect'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'moderate'
@@ -889,6 +1049,16 @@ SELECT
     WHEN 'silver-stelis' THEN 'frequent'
     WHEN 'grobyi-specklinia' THEN 'moderate'
     WHEN 'comparettia-orchid' THEN 'moderate'
+    WHEN 'lady-of-the-night-orchid' THEN 'moderate'
+    WHEN 'scaphosepalum-orchid' THEN 'frequent'
+    WHEN 'purple-ground-orchid' THEN 'moderate'
+    WHEN 'giant-arpophyllum' THEN 'moderate'
+    WHEN 'red-vanda' THEN 'frequent'
+    WHEN 'roezls-miltoniopsis' THEN 'frequent'
+    WHEN 'peters-eulophia' THEN 'low'
+    WHEN 'mini-erycina' THEN 'moderate'
+    WHEN 'bamboo-orchid' THEN 'moderate'
+    WHEN 'cooper-cycnoches' THEN 'moderate'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 50
@@ -941,6 +1111,16 @@ SELECT
     WHEN 'silver-stelis' THEN 75
     WHEN 'grobyi-specklinia' THEN 65
     WHEN 'comparettia-orchid' THEN 60
+    WHEN 'lady-of-the-night-orchid' THEN 50
+    WHEN 'scaphosepalum-orchid' THEN 75
+    WHEN 'purple-ground-orchid' THEN 50
+    WHEN 'giant-arpophyllum' THEN 50
+    WHEN 'red-vanda' THEN 60
+    WHEN 'roezls-miltoniopsis' THEN 60
+    WHEN 'peters-eulophia' THEN 30
+    WHEN 'mini-erycina' THEN 55
+    WHEN 'bamboo-orchid' THEN 50
+    WHEN 'cooper-cycnoches' THEN 50
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 70
@@ -993,6 +1173,16 @@ SELECT
     WHEN 'silver-stelis' THEN 90
     WHEN 'grobyi-specklinia' THEN 85
     WHEN 'comparettia-orchid' THEN 85
+    WHEN 'lady-of-the-night-orchid' THEN 80
+    WHEN 'scaphosepalum-orchid' THEN 90
+    WHEN 'purple-ground-orchid' THEN 75
+    WHEN 'giant-arpophyllum' THEN 80
+    WHEN 'red-vanda' THEN 85
+    WHEN 'roezls-miltoniopsis' THEN 85
+    WHEN 'peters-eulophia' THEN 60
+    WHEN 'mini-erycina' THEN 80
+    WHEN 'bamboo-orchid' THEN 80
+    WHEN 'cooper-cycnoches' THEN 80
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 18
@@ -1045,6 +1235,16 @@ SELECT
     WHEN 'silver-stelis' THEN 10
     WHEN 'grobyi-specklinia' THEN 14
     WHEN 'comparettia-orchid' THEN 16
+    WHEN 'lady-of-the-night-orchid' THEN 16
+    WHEN 'scaphosepalum-orchid' THEN 10
+    WHEN 'purple-ground-orchid' THEN 18
+    WHEN 'giant-arpophyllum' THEN 12
+    WHEN 'red-vanda' THEN 18
+    WHEN 'roezls-miltoniopsis' THEN 10
+    WHEN 'peters-eulophia' THEN 16
+    WHEN 'mini-erycina' THEN 16
+    WHEN 'bamboo-orchid' THEN 18
+    WHEN 'cooper-cycnoches' THEN 18
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 29
@@ -1097,6 +1297,16 @@ SELECT
     WHEN 'silver-stelis' THEN 24
     WHEN 'grobyi-specklinia' THEN 26
     WHEN 'comparettia-orchid' THEN 28
+    WHEN 'lady-of-the-night-orchid' THEN 32
+    WHEN 'scaphosepalum-orchid' THEN 24
+    WHEN 'purple-ground-orchid' THEN 32
+    WHEN 'giant-arpophyllum' THEN 28
+    WHEN 'red-vanda' THEN 32
+    WHEN 'roezls-miltoniopsis' THEN 24
+    WHEN 'peters-eulophia' THEN 34
+    WHEN 'mini-erycina' THEN 28
+    WHEN 'bamboo-orchid' THEN 32
+    WHEN 'cooper-cycnoches' THEN 32
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Medium bark mix with good drainage and airflow.'
@@ -1149,6 +1359,16 @@ SELECT
     WHEN 'silver-stelis' THEN 'Fine bark or mounted culture with constant humidity and airflow.'
     WHEN 'grobyi-specklinia' THEN 'Fine bark, mounted culture, or small airy pot with steady humidity.'
     WHEN 'comparettia-orchid' THEN 'Mounted culture or fine bark with quick drainage and high humidity.'
+    WHEN 'lady-of-the-night-orchid' THEN 'Coarse bark, basket, or mounted culture with fast drying and strong airflow.'
+    WHEN 'scaphosepalum-orchid' THEN 'Fine bark or sphagnum-based mix kept cool, moist, and very airy.'
+    WHEN 'purple-ground-orchid' THEN 'Loose terrestrial orchid mix with drainage and steady moisture.'
+    WHEN 'giant-arpophyllum' THEN 'Medium bark mix or mounted culture with reliable drainage.'
+    WHEN 'red-vanda' THEN 'Open basket or very coarse bark with excellent airflow around roots.'
+    WHEN 'roezls-miltoniopsis' THEN 'Fine to medium bark mix that stays evenly moist but airy.'
+    WHEN 'peters-eulophia' THEN 'Fast-draining terrestrial mix with mineral grit and seasonal drying.'
+    WHEN 'mini-erycina' THEN 'Mounted culture or a tiny airy pot with fine bark and quick drainage.'
+    WHEN 'bamboo-orchid' THEN 'Loose terrestrial mix with organic matter and excellent drainage.'
+    WHEN 'cooper-cycnoches' THEN 'Medium bark or sphagnum mix for growth, kept much drier during dormancy.'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'varies'
@@ -1201,6 +1421,16 @@ SELECT
     WHEN 'silver-stelis' THEN 'varies'
     WHEN 'grobyi-specklinia' THEN 'varies'
     WHEN 'comparettia-orchid' THEN 'spring'
+    WHEN 'lady-of-the-night-orchid' THEN 'varies'
+    WHEN 'scaphosepalum-orchid' THEN 'varies'
+    WHEN 'purple-ground-orchid' THEN 'varies'
+    WHEN 'giant-arpophyllum' THEN 'spring'
+    WHEN 'red-vanda' THEN 'summer'
+    WHEN 'roezls-miltoniopsis' THEN 'spring'
+    WHEN 'peters-eulophia' THEN 'summer'
+    WHEN 'mini-erycina' THEN 'varies'
+    WHEN 'bamboo-orchid' THEN 'varies'
+    WHEN 'cooper-cycnoches' THEN 'autumn'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Can bloom indoors for several months when kept warm and evenly cared for.'
@@ -1253,6 +1483,16 @@ SELECT
     WHEN 'silver-stelis' THEN 'Tiny flowers line slender spikes and reward stable humidity.'
     WHEN 'grobyi-specklinia' THEN 'Small delicate flowers appear on compact pleurothallid growths.'
     WHEN 'comparettia-orchid' THEN 'Bright orange flowers can arch or hang from compact plants.'
+    WHEN 'lady-of-the-night-orchid' THEN 'White night-fragrant flowers open from mature growths and are strongest after dark.'
+    WHEN 'scaphosepalum-orchid' THEN 'Small unusual flowers can appear successively when humidity and cool air stay stable.'
+    WHEN 'purple-ground-orchid' THEN 'Upright spikes can carry many purple flowers through warm growing periods.'
+    WHEN 'giant-arpophyllum' THEN 'Dense purple-pink spikes rise from mature growths, often in spring.'
+    WHEN 'red-vanda' THEN 'Branching sprays carry vivid red-orange flowers in bright warm conditions.'
+    WHEN 'roezls-miltoniopsis' THEN 'Broad pansy-like flowers prefer cool humidity and steady moisture.'
+    WHEN 'peters-eulophia' THEN 'Green and purple flowers appear after strong seasonal growth in bright conditions.'
+    WHEN 'mini-erycina' THEN 'Tiny yellow flowers reward stable humidity and careful watering.'
+    WHEN 'bamboo-orchid' THEN 'Tall reed-like stems can produce bright pink flowers repeatedly in warm climates.'
+    WHEN 'cooper-cycnoches' THEN 'Waxy flowers appear from mature deciduous growths before the dry rest.'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Keep warm in bright indirect light, water when the bark is nearly dry, and avoid water sitting in the crown.'
@@ -1305,6 +1545,16 @@ SELECT
     WHEN 'silver-stelis' THEN 'Grow cool to intermediate in shade with high humidity and steady moisture.'
     WHEN 'grobyi-specklinia' THEN 'Provide shaded intermediate conditions, high humidity, and a small airy root zone.'
     WHEN 'comparettia-orchid' THEN 'Grow mounted or in a small airy pot with bright shade, humidity, and quick drainage.'
+    WHEN 'lady-of-the-night-orchid' THEN 'Give bright light, warm air, strong airflow, and let roots dry lightly between waterings.'
+    WHEN 'scaphosepalum-orchid' THEN 'Keep cool, shaded, very humid, and evenly moist while protecting roots from stale media.'
+    WHEN 'purple-ground-orchid' THEN 'Grow warm and bright in a draining terrestrial mix, watering before the root zone dries hard.'
+    WHEN 'giant-arpophyllum' THEN 'Provide bright filtered light, intermediate warmth, steady humidity, and good root aeration.'
+    WHEN 'red-vanda' THEN 'Grow very bright and warm with frequent watering, high humidity, and fast-drying roots.'
+    WHEN 'roezls-miltoniopsis' THEN 'Keep cool to intermediate in medium light with constant gentle moisture and airflow.'
+    WHEN 'peters-eulophia' THEN 'Grow hot and bright with sharp drainage, watering in growth and reducing water in rest.'
+    WHEN 'mini-erycina' THEN 'Use bright filtered light, high humidity, and a very airy root zone that never stays soggy.'
+    WHEN 'bamboo-orchid' THEN 'Give warm bright conditions, regular watering, and a free-draining terrestrial mix.'
+    WHEN 'cooper-cycnoches' THEN 'Water and feed during active growth, then keep much drier after leaves yellow and drop.'
   END
 FROM seeded_orchids;
 
