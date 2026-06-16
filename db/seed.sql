@@ -435,6 +435,146 @@ WITH seeded_orchids AS (
       'https://commons.wikimedia.org/wiki/File:Prosthechea_cochleata,_the_Clamshell_Orchid_(11023302476).jpg',
       'CC BY 2.0',
       'Dick Culbert, via Wikimedia Commons'
+    ),
+    (
+      'tiger-orchid',
+      'Tiger Orchid',
+      'Grammatophyllum speciosum',
+      'Grammatophyllum',
+      'A giant orchid with tall sprays of yellow flowers marked in brown.',
+      'Southeast Asia and New Guinea',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/a/a7/Tiger_Orchid_%28Grammatophyllum_speciosum%29.jpg',
+      'Grammatophyllum speciosum tiger orchid flowers with yellow and brown markings.',
+      'https://commons.wikimedia.org/wiki/File:Tiger_Orchid_(Grammatophyllum_speciosum).jpg',
+      'CC BY-SA 4.0',
+      'Mokkie, via Wikimedia Commons'
+    ),
+    (
+      'large-flowered-sobralia',
+      'Large-flowered Sobralia',
+      'Sobralia macrantha',
+      'Sobralia',
+      'A reed-like terrestrial orchid with large short-lived pink to purple flowers.',
+      'Mexico and Central America',
+      'terrestrial',
+      'https://upload.wikimedia.org/wikipedia/commons/2/2c/2007_sobralia_macrantha.jpg',
+      'Purple Sobralia macrantha large-flowered sobralia bloom.',
+      'https://commons.wikimedia.org/wiki/File:2007_sobralia_macrantha.jpg',
+      'CC BY-SA 3.0',
+      'Rl, via Wikimedia Commons'
+    ),
+    (
+      'calanthe-orchid',
+      'Calanthe Orchid',
+      'Calanthe discolor',
+      'Calanthe',
+      'A woodland terrestrial orchid with pleated leaves and delicate seasonal flowers.',
+      'Japan and East Asia',
+      'terrestrial',
+      'https://upload.wikimedia.org/wikipedia/commons/6/66/Calanthe_discolor_Lindl.%2C_Sert._Orchid._t._9_%281838%29_%2841795883431%29.jpg',
+      'Calanthe discolor orchid flowers with pale and warm-toned markings.',
+      'https://commons.wikimedia.org/wiki/File:Calanthe_discolor_Lindl.,_Sert._Orchid._t._9_(1838)_(41795883431).jpg',
+      'CC BY 2.0',
+      'Sunoochi, via Wikimedia Commons'
+    ),
+    (
+      'red-disa',
+      'Red Disa',
+      'Disa uniflora',
+      'Disa',
+      'A striking South African orchid with vivid red flowers from cool stream habitats.',
+      'South Africa',
+      'terrestrial',
+      'https://upload.wikimedia.org/wikipedia/commons/0/0d/Disa_uniflora_orchid_species.jpg',
+      'Red Disa uniflora orchid flower with broad scarlet sepals.',
+      'https://commons.wikimedia.org/wiki/File:Disa_uniflora_orchid_species.jpg',
+      'CC BY-SA 3.0',
+      'Seattleorchid, via Wikimedia Commons'
+    ),
+    (
+      'egret-orchid',
+      'Egret Orchid',
+      'Habenaria radiata',
+      'Habenaria',
+      'A small terrestrial orchid whose white fringed flowers resemble flying egrets.',
+      'Japan, Korea, China, and eastern Russia',
+      'terrestrial',
+      'https://upload.wikimedia.org/wikipedia/commons/4/44/A_and_B_Larsen_orchids_-_Habenaria_radiata.jpg',
+      'White Habenaria radiata egret orchid flowers with fringed petals.',
+      'https://commons.wikimedia.org/wiki/File:A_and_B_Larsen_orchids_-_Habenaria_radiata.jpg',
+      'CC BY-SA 2.5 DK',
+      'Arne and Bent Larsen, via Wikimedia Commons'
+    ),
+    (
+      'odontoglossum-orchid',
+      'Odontoglossum Orchid',
+      'Odontoglossum smithii',
+      'Odontoglossum',
+      'A cool-growing orchid with patterned flowers often represented in classic orchid collections.',
+      'Andean South America',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/6/6b/Odontoglossum_smithii.jpg',
+      'Botanical illustration of Odontoglossum smithii orchid flowers.',
+      'https://commons.wikimedia.org/wiki/File:Odontoglossum_smithii.jpg',
+      'Public domain',
+      'Unknown illustrator, via Wikimedia Commons'
+    ),
+    (
+      'equitant-oncidium',
+      'Equitant Oncidium',
+      'Tolumnia variegata',
+      'Tolumnia',
+      'A compact Caribbean orchid with fan-shaped foliage and colorful dancing flowers.',
+      'Caribbean islands',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/2/26/Tolumnia_variegata_8129579.jpg',
+      'Tolumnia variegata orchid flowers with small colorful blooms.',
+      'https://commons.wikimedia.org/wiki/File:Tolumnia_variegata_8129579.jpg',
+      'CC0',
+      'Jim Kingdon, via Wikimedia Commons'
+    ),
+    (
+      'twisted-trichopilia',
+      'Twisted Trichopilia',
+      'Trichopilia tortilis',
+      'Trichopilia',
+      'A fragrant orchid with twisted floral segments and a broad showy lip.',
+      'Mexico and Central America',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/8/8f/R._Warner_%26_B.S._Williams_-_The_Orchid_Album_-_volume_08_-_plate_349_%281889%29.jpg',
+      'Botanical illustration of Trichopilia tortilis orchid flowers.',
+      'https://commons.wikimedia.org/wiki/File:R._Warner_%26_B.S._Williams_-_The_Orchid_Album_-_volume_08_-_plate_349_(1889).jpg',
+      'Public domain',
+      'Unknown author, via Wikimedia Commons'
+    ),
+    (
+      'cobb-dendrochilum',
+      'Cobb Dendrochilum',
+      'Dendrochilum cobbianum',
+      'Dendrochilum',
+      'A graceful orchid with many small flowers carried in arching chains.',
+      'Philippines',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/d/dc/Dendrochilum_cobbianum_at_the_Pacific_Orchid_Exposition_2010.jpg',
+      'Dendrochilum cobbianum orchid with arching chains of small flowers.',
+      'https://commons.wikimedia.org/wiki/File:Dendrochilum_cobbianum_at_the_Pacific_Orchid_Exposition_2010.jpg',
+      'CC BY-SA 3.0',
+      'Guillaume Paumier, via Wikimedia Commons'
+    ),
+    (
+      'nun-orchid',
+      'Nun Orchid',
+      'Phaius tankervilleae',
+      'Phaius',
+      'A large terrestrial orchid with pleated leaves and tall spikes of brown and white flowers.',
+      'Asia, Australia, and Pacific islands',
+      'terrestrial',
+      'https://upload.wikimedia.org/wikipedia/commons/a/a9/Phaius_tankervilleae_-_Flickr_003.jpg',
+      'Phaius tankervilleae nun orchid flower with brown and white tones.',
+      'https://commons.wikimedia.org/wiki/File:Phaius_tankervilleae_-_Flickr_003.jpg',
+      'CC BY 2.0',
+      'Elena Gaillard, via Wikimedia Commons'
     )
   RETURNING id, slug
 )
@@ -485,6 +625,16 @@ SELECT
     WHEN 'chinese-ground-orchid' THEN 'beginner'
     WHEN 'samurai-orchid' THEN 'intermediate'
     WHEN 'black-orchid' THEN 'intermediate'
+    WHEN 'tiger-orchid' THEN 'advanced'
+    WHEN 'large-flowered-sobralia' THEN 'intermediate'
+    WHEN 'calanthe-orchid' THEN 'intermediate'
+    WHEN 'red-disa' THEN 'advanced'
+    WHEN 'egret-orchid' THEN 'advanced'
+    WHEN 'odontoglossum-orchid' THEN 'advanced'
+    WHEN 'equitant-oncidium' THEN 'intermediate'
+    WHEN 'twisted-trichopilia' THEN 'intermediate'
+    WHEN 'cobb-dendrochilum' THEN 'intermediate'
+    WHEN 'nun-orchid' THEN 'beginner'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'bright-indirect'
@@ -517,6 +667,16 @@ SELECT
     WHEN 'chinese-ground-orchid' THEN 'medium'
     WHEN 'samurai-orchid' THEN 'bright-indirect'
     WHEN 'black-orchid' THEN 'bright-indirect'
+    WHEN 'tiger-orchid' THEN 'high'
+    WHEN 'large-flowered-sobralia' THEN 'bright-indirect'
+    WHEN 'calanthe-orchid' THEN 'medium'
+    WHEN 'red-disa' THEN 'bright-indirect'
+    WHEN 'egret-orchid' THEN 'medium'
+    WHEN 'odontoglossum-orchid' THEN 'medium'
+    WHEN 'equitant-oncidium' THEN 'bright-indirect'
+    WHEN 'twisted-trichopilia' THEN 'bright-indirect'
+    WHEN 'cobb-dendrochilum' THEN 'bright-indirect'
+    WHEN 'nun-orchid' THEN 'bright-indirect'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'moderate'
@@ -549,6 +709,16 @@ SELECT
     WHEN 'chinese-ground-orchid' THEN 'moderate'
     WHEN 'samurai-orchid' THEN 'moderate'
     WHEN 'black-orchid' THEN 'moderate'
+    WHEN 'tiger-orchid' THEN 'frequent'
+    WHEN 'large-flowered-sobralia' THEN 'moderate'
+    WHEN 'calanthe-orchid' THEN 'moderate'
+    WHEN 'red-disa' THEN 'frequent'
+    WHEN 'egret-orchid' THEN 'frequent'
+    WHEN 'odontoglossum-orchid' THEN 'moderate'
+    WHEN 'equitant-oncidium' THEN 'moderate'
+    WHEN 'twisted-trichopilia' THEN 'moderate'
+    WHEN 'cobb-dendrochilum' THEN 'moderate'
+    WHEN 'nun-orchid' THEN 'moderate'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 50
@@ -581,6 +751,16 @@ SELECT
     WHEN 'chinese-ground-orchid' THEN 45
     WHEN 'samurai-orchid' THEN 50
     WHEN 'black-orchid' THEN 55
+    WHEN 'tiger-orchid' THEN 60
+    WHEN 'large-flowered-sobralia' THEN 50
+    WHEN 'calanthe-orchid' THEN 50
+    WHEN 'red-disa' THEN 70
+    WHEN 'egret-orchid' THEN 60
+    WHEN 'odontoglossum-orchid' THEN 60
+    WHEN 'equitant-oncidium' THEN 50
+    WHEN 'twisted-trichopilia' THEN 55
+    WHEN 'cobb-dendrochilum' THEN 55
+    WHEN 'nun-orchid' THEN 50
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 70
@@ -613,6 +793,16 @@ SELECT
     WHEN 'chinese-ground-orchid' THEN 70
     WHEN 'samurai-orchid' THEN 75
     WHEN 'black-orchid' THEN 80
+    WHEN 'tiger-orchid' THEN 85
+    WHEN 'large-flowered-sobralia' THEN 75
+    WHEN 'calanthe-orchid' THEN 75
+    WHEN 'red-disa' THEN 90
+    WHEN 'egret-orchid' THEN 85
+    WHEN 'odontoglossum-orchid' THEN 85
+    WHEN 'equitant-oncidium' THEN 75
+    WHEN 'twisted-trichopilia' THEN 80
+    WHEN 'cobb-dendrochilum' THEN 80
+    WHEN 'nun-orchid' THEN 80
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 18
@@ -645,6 +835,16 @@ SELECT
     WHEN 'chinese-ground-orchid' THEN 8
     WHEN 'samurai-orchid' THEN 12
     WHEN 'black-orchid' THEN 18
+    WHEN 'tiger-orchid' THEN 20
+    WHEN 'large-flowered-sobralia' THEN 16
+    WHEN 'calanthe-orchid' THEN 10
+    WHEN 'red-disa' THEN 8
+    WHEN 'egret-orchid' THEN 10
+    WHEN 'odontoglossum-orchid' THEN 10
+    WHEN 'equitant-oncidium' THEN 18
+    WHEN 'twisted-trichopilia' THEN 16
+    WHEN 'cobb-dendrochilum' THEN 16
+    WHEN 'nun-orchid' THEN 16
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 29
@@ -677,6 +877,16 @@ SELECT
     WHEN 'chinese-ground-orchid' THEN 28
     WHEN 'samurai-orchid' THEN 28
     WHEN 'black-orchid' THEN 30
+    WHEN 'tiger-orchid' THEN 32
+    WHEN 'large-flowered-sobralia' THEN 28
+    WHEN 'calanthe-orchid' THEN 26
+    WHEN 'red-disa' THEN 22
+    WHEN 'egret-orchid' THEN 28
+    WHEN 'odontoglossum-orchid' THEN 24
+    WHEN 'equitant-oncidium' THEN 30
+    WHEN 'twisted-trichopilia' THEN 28
+    WHEN 'cobb-dendrochilum' THEN 28
+    WHEN 'nun-orchid' THEN 30
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Medium bark mix with good drainage and airflow.'
@@ -709,6 +919,16 @@ SELECT
     WHEN 'chinese-ground-orchid' THEN 'Loose terrestrial mix with organic matter and reliable drainage.'
     WHEN 'samurai-orchid' THEN 'Coarse bark, mounted culture, or traditional airy mound culture.'
     WHEN 'black-orchid' THEN 'Medium bark mix or mounted culture with steady moisture and airflow.'
+    WHEN 'tiger-orchid' THEN 'Very coarse bark, basket culture, or a large free-draining container.'
+    WHEN 'large-flowered-sobralia' THEN 'Rich but free-draining terrestrial mix that stays lightly moist.'
+    WHEN 'calanthe-orchid' THEN 'Loose terrestrial mix with organic matter and seasonal moisture.'
+    WHEN 'red-disa' THEN 'Cool, clean, moisture-retentive terrestrial mix with excellent water quality.'
+    WHEN 'egret-orchid' THEN 'Moist terrestrial bog-style mix with seasonal winter rest.'
+    WHEN 'odontoglossum-orchid' THEN 'Fine to medium bark mix kept cool, airy, and evenly moist.'
+    WHEN 'equitant-oncidium' THEN 'Small bark, mounted culture, or fast-draining mix for compact roots.'
+    WHEN 'twisted-trichopilia' THEN 'Medium bark mix with moisture retention and steady airflow.'
+    WHEN 'cobb-dendrochilum' THEN 'Fine to medium bark mix with steady moisture and good drainage.'
+    WHEN 'nun-orchid' THEN 'Rich terrestrial orchid mix with drainage and moisture retention.'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'varies'
@@ -741,6 +961,16 @@ SELECT
     WHEN 'chinese-ground-orchid' THEN 'spring'
     WHEN 'samurai-orchid' THEN 'summer'
     WHEN 'black-orchid' THEN 'varies'
+    WHEN 'tiger-orchid' THEN 'varies'
+    WHEN 'large-flowered-sobralia' THEN 'summer'
+    WHEN 'calanthe-orchid' THEN 'spring'
+    WHEN 'red-disa' THEN 'summer'
+    WHEN 'egret-orchid' THEN 'summer'
+    WHEN 'odontoglossum-orchid' THEN 'winter'
+    WHEN 'equitant-oncidium' THEN 'varies'
+    WHEN 'twisted-trichopilia' THEN 'spring'
+    WHEN 'cobb-dendrochilum' THEN 'spring'
+    WHEN 'nun-orchid' THEN 'spring'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Can bloom indoors for several months when kept warm and evenly cared for.'
@@ -773,6 +1003,16 @@ SELECT
     WHEN 'chinese-ground-orchid' THEN 'Hardy pleated leaves and pink spring flowers rise from terrestrial pseudobulbs.'
     WHEN 'samurai-orchid' THEN 'Small fragrant white flowers open in warm weather from compact fans.'
     WHEN 'black-orchid' THEN 'Sequential flowers can continue for a long season from mature growths.'
+    WHEN 'tiger-orchid' THEN 'Huge plants can carry tall spotted flower sprays when mature.'
+    WHEN 'large-flowered-sobralia' THEN 'Large blooms are showy but often short-lived, opening from reed-like stems.'
+    WHEN 'calanthe-orchid' THEN 'Seasonal spikes rise from pleated foliage after active growth.'
+    WHEN 'red-disa' THEN 'Brilliant red flowers appear in cool wet conditions and need constant moisture.'
+    WHEN 'egret-orchid' THEN 'White fringed flowers look like small birds in flight.'
+    WHEN 'odontoglossum-orchid' THEN 'Patterned flowers prefer cool, humid, intermediate-to-low light conditions.'
+    WHEN 'equitant-oncidium' THEN 'Compact plants can bloom with colorful sprays from fan-shaped growths.'
+    WHEN 'twisted-trichopilia' THEN 'Fragrant flowers have twisted segments and a wide decorative lip.'
+    WHEN 'cobb-dendrochilum' THEN 'Arching chains carry many small flowers from compact growths.'
+    WHEN 'nun-orchid' THEN 'Tall spikes emerge from large pleated leaves and carry broad flowers.'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Keep warm in bright indirect light, water when the bark is nearly dry, and avoid water sitting in the crown.'
@@ -805,6 +1045,16 @@ SELECT
     WHEN 'chinese-ground-orchid' THEN 'Grow in a free-draining terrestrial mix with moderate light and a cooler winter rest.'
     WHEN 'samurai-orchid' THEN 'Grow bright and airy with moderate moisture, good humidity, and cooler nights when possible.'
     WHEN 'black-orchid' THEN 'Provide bright filtered light, steady warmth, and a lightly drying period between waterings.'
+    WHEN 'tiger-orchid' THEN 'Give very bright warmth, high humidity, strong airflow, and ample space for large growth.'
+    WHEN 'large-flowered-sobralia' THEN 'Grow warm in bright filtered light with steady moisture and room for tall cane-like stems.'
+    WHEN 'calanthe-orchid' THEN 'Water during active growth, reduce after leaf drop, and keep the terrestrial mix airy.'
+    WHEN 'red-disa' THEN 'Keep cool, wet, and bright with very clean water and avoid warm stagnant conditions.'
+    WHEN 'egret-orchid' THEN 'Grow in moist acidic media during growth, then provide a cool drier winter dormancy.'
+    WHEN 'odontoglossum-orchid' THEN 'Keep cool, humid, and evenly moist with gentle light and excellent airflow.'
+    WHEN 'equitant-oncidium' THEN 'Grow bright and airy in a small fast-draining setup, watering as roots approach dryness.'
+    WHEN 'twisted-trichopilia' THEN 'Provide intermediate warmth, bright shade, steady humidity, and a lightly moist bark mix.'
+    WHEN 'cobb-dendrochilum' THEN 'Grow in bright filtered light with steady moisture and avoid letting fine roots dry hard.'
+    WHEN 'nun-orchid' THEN 'Grow warm in bright shade with regular water during growth and a lighter winter rest.'
   END
 FROM seeded_orchids;
 
