@@ -55,3 +55,26 @@ export type OrchidListResponse = {
 export type OrchidDetailResponse = {
   orchid: OrchidDetail;
 };
+
+export type OrchidFilterOption<TValue extends string = string> = {
+  value: TValue;
+  label: string;
+};
+
+export type OrchidFilterMetadataResponse = {
+  filters: {
+    difficulties: Array<OrchidFilterOption<OrchidDifficulty>>;
+    lightNeeds: Array<OrchidFilterOption<OrchidLightNeeds>>;
+    wateringNeeds: Array<OrchidFilterOption<OrchidWateringNeeds>>;
+    growthTypes: Array<OrchidFilterOption<OrchidGrowthType>>;
+    bloomSeasons: Array<OrchidFilterOption<OrchidBloomSeason>>;
+    humidityPercentRange: {
+      min: number;
+      max: number;
+    };
+    temperatureCelsiusRange: {
+      min: number;
+      max: number;
+    };
+  };
+};

@@ -1,10 +1,21 @@
 import type { Pool } from "pg";
 
-import type { OrchidDetail, OrchidListFilters, OrchidListItem } from "./orchid.types.js";
+import type {
+  OrchidBloomSeason,
+  OrchidDetail,
+  OrchidDifficulty,
+  OrchidFilterMetadataResponse,
+  OrchidGrowthType,
+  OrchidLightNeeds,
+  OrchidListFilters,
+  OrchidListItem,
+  OrchidWateringNeeds,
+} from "./orchid.types.js";
 
 export type OrchidRepository = {
   listOrchids: (filters?: OrchidListFilters) => Promise<OrchidListItem[]>;
   findOrchidBySlug: (slug: string) => Promise<OrchidDetail | null>;
+  getFilterMetadata: () => Promise<OrchidFilterMetadataResponse>;
 };
 
 type OrchidListRow = {
@@ -34,6 +45,18 @@ type OrchidDetailRow = OrchidListRow & {
   image_source_url: string | null;
   image_license: string | null;
   image_attribution: string | null;
+};
+
+type OrchidFilterMetadataRow = {
+  difficulties: OrchidDifficulty[];
+  light_needs: OrchidLightNeeds[];
+  watering_needs: OrchidWateringNeeds[];
+  growth_types: OrchidGrowthType[];
+  bloom_seasons: OrchidBloomSeason[];
+  humidity_min_percent: number;
+  humidity_max_percent: number;
+  temperature_min_celsius: number;
+  temperature_max_celsius: number;
 };
 
 export function createOrchidRepository(pool: Pool): OrchidRepository {
@@ -159,6 +182,30 @@ export function createOrchidRepository(pool: Pool): OrchidRepository {
 
       return row ? mapOrchidDetailRow(row) : null;
     },
+
+    async getFilterMetadata() {
+      const result = await pool.query<OrchidFilterMetadataRow>(`
+        SELECT
+          ARRAY_AGG(DISTINCT orchid_care_profiles.difficulty ORDER BY orchid_care_profiles.difficulty)
+            AS difficulties,
+          ARRAY_AGG(DISTINCT orchid_care_profiles.light_needs ORDER BY orchid_care_profiles.light_needs)
+            AS light_needs,
+          ARRAY_AGG(DISTINCT orchid_care_profiles.watering_needs ORDER BY orchid_care_profiles.watering_needs)
+            AS watering_needs,
+          ARRAY_AGG(DISTINCT orchids.growth_type ORDER BY orchids.growth_type)
+            AS growth_types,
+          ARRAY_AGG(DISTINCT orchid_care_profiles.bloom_season ORDER BY orchid_care_profiles.bloom_season)
+            AS bloom_seasons,
+          MIN(orchid_care_profiles.humidity_min_percent) AS humidity_min_percent,
+          MAX(orchid_care_profiles.humidity_max_percent) AS humidity_max_percent,
+          MIN(orchid_care_profiles.temperature_min_celsius) AS temperature_min_celsius,
+          MAX(orchid_care_profiles.temperature_max_celsius) AS temperature_max_celsius
+        FROM orchids
+        INNER JOIN orchid_care_profiles ON orchid_care_profiles.orchid_id = orchids.id
+      `);
+
+      return mapOrchidFilterMetadataRow(result.rows[0]);
+    },
   };
 }
 
@@ -194,4 +241,38 @@ function mapOrchidDetailRow(row: OrchidDetailRow): OrchidDetail {
     imageLicense: row.image_license,
     imageAttribution: row.image_attribution,
   };
+}
+
+function mapOrchidFilterMetadataRow(row: OrchidFilterMetadataRow): OrchidFilterMetadataResponse {
+  return {
+    filters: {
+      difficulties: row.difficulties.map(mapFilterOption),
+      lightNeeds: row.light_needs.map(mapFilterOption),
+      wateringNeeds: row.watering_needs.map(mapFilterOption),
+      growthTypes: row.growth_types.map(mapFilterOption),
+      bloomSeasons: row.bloom_seasons.map(mapFilterOption),
+      humidityPercentRange: {
+        min: row.humidity_min_percent,
+        max: row.humidity_max_percent,
+      },
+      temperatureCelsiusRange: {
+        min: row.temperature_min_celsius,
+        max: row.temperature_max_celsius,
+      },
+    },
+  };
+}
+
+function mapFilterOption<TValue extends string>(value: TValue) {
+  return {
+    value,
+    label: formatFilterLabel(value),
+  };
+}
+
+function formatFilterLabel(value: string) {
+  return value
+    .split("-")
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
 }

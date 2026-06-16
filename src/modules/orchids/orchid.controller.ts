@@ -19,6 +19,7 @@ type OrchidRequestHandler = (
 export type OrchidController = {
   listOrchids: OrchidRequestHandler;
   getOrchidBySlug: OrchidRequestHandler;
+  getFilterMetadata: OrchidRequestHandler;
 };
 
 export function createOrchidController(service: OrchidService): OrchidController {
@@ -67,6 +68,12 @@ export function createOrchidController(service: OrchidService): OrchidController
       }
 
       response.json(orchid);
+    },
+
+    async getFilterMetadata(_request, response) {
+      const metadata = await service.getFilterMetadata();
+
+      response.json(metadata);
     },
   };
 }

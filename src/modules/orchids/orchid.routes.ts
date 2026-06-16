@@ -11,6 +11,9 @@ const orchidService = createOrchidService(orchidRepository);
 const orchidController = createOrchidController(orchidService);
 
 export const orchidRouter = express.Router();
+export const orchidFilterRouter = express.Router();
 
 orchidRouter.get("/", asyncHandler(orchidController.listOrchids));
 orchidRouter.get("/:slug", asyncHandler(orchidController.getOrchidBySlug));
+
+orchidFilterRouter.get("/", asyncHandler(orchidController.getFilterMetadata));
