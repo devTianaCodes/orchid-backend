@@ -995,6 +995,76 @@ WITH seeded_orchids AS (
       'https://commons.wikimedia.org/wiki/File:Paphiopedilum_armeniacum_001_GotBot_2018.jpg',
       'CC BY 4.0',
       'Averater, via Wikimedia Commons'
+    ),
+    (
+      'western-prairie-fringed-orchid',
+      'Western Prairie Fringed Orchid',
+      'Platanthera praeclara',
+      'Platanthera',
+      'A threatened tallgrass prairie orchid with white night-fragrant fringed flowers.',
+      'Central North American tallgrass prairies',
+      'terrestrial',
+      'https://upload.wikimedia.org/wikipedia/commons/3/3c/Platanthera-praeclara.web.jpg',
+      'White Platanthera praeclara western prairie fringed orchid flowers on an upright spike.',
+      'https://commons.wikimedia.org/wiki/File:Platanthera-praeclara.web.jpg',
+      'Public domain',
+      'Tom Spikermeier/USGS, via Wikimedia Commons'
+    ),
+    (
+      'small-whorled-pogonia',
+      'Small Whorled Pogonia',
+      'Isotria medeoloides',
+      'Isotria',
+      'A rare woodland orchid with a whorl of leaves and understated greenish flowers.',
+      'Eastern North America',
+      'terrestrial',
+      'https://upload.wikimedia.org/wikipedia/commons/2/29/Isotria_medeoloides2.jpg',
+      'Isotria medeoloides small whorled pogonia plant with whorled leaves.',
+      'https://commons.wikimedia.org/wiki/File:Isotria_medeoloides2.jpg',
+      'Public domain',
+      'Robert H. Mohlenbrock/USDA-NRCS PLANTS Database, via Wikimedia Commons'
+    ),
+    (
+      'grand-spider-orchid',
+      'Grand Spider Orchid',
+      'Caladenia huegelii',
+      'Caladenia',
+      'A critically endangered Western Australian spider orchid with long narrow floral segments.',
+      'Southwestern Western Australia',
+      'terrestrial',
+      'https://upload.wikimedia.org/wikipedia/commons/a/a3/Caladenia_huegelii_-_Grand_Spider_orchid_%282680576997%29.jpg',
+      'Caladenia huegelii grand spider orchid flower with long slender petals and sepals.',
+      'https://commons.wikimedia.org/wiki/File:Caladenia_huegelii_-_Grand_Spider_orchid_(2680576997).jpg',
+      'CC BY 2.0',
+      'Jean and Fred, via Wikimedia Commons'
+    ),
+    (
+      'queen-of-sheba-orchid',
+      'Queen of Sheba Orchid',
+      'Thelymitra variegata',
+      'Thelymitra',
+      'A rare sun orchid admired for jewel-toned purple, blue, yellow, and red flowers.',
+      'Southwestern Western Australia',
+      'terrestrial',
+      'https://upload.wikimedia.org/wikipedia/commons/f/f1/Thelymitra_variegata.jpg',
+      'Colorful Thelymitra variegata Queen of Sheba orchid flower.',
+      'https://commons.wikimedia.org/wiki/File:Thelymitra_variegata.jpg',
+      'CC0',
+      'Hogggyyy, via Wikimedia Commons'
+    ),
+    (
+      'navasota-ladies-tresses',
+      'Navasota Ladies''-tresses',
+      'Spiranthes parksii',
+      'Spiranthes',
+      'An endangered Texas orchid with small white flowers spiraling along an upright stem.',
+      'East-central Texas, United States',
+      'terrestrial',
+      'https://upload.wikimedia.org/wikipedia/commons/e/e6/Spiranthes_parksii.jpg',
+      'Spiranthes parksii Navasota ladies-tresses orchid with small white spiral flowers.',
+      'https://commons.wikimedia.org/wiki/File:Spiranthes_parksii.jpg',
+      'CC BY 4.0',
+      'Hugh D. Wilson, via Wikimedia Commons'
     )
   RETURNING id, slug
 )
@@ -1085,6 +1155,11 @@ SELECT
     WHEN 'purple-paphiopedilum' THEN 'advanced'
     WHEN 'kovachs-phragmipedium' THEN 'advanced'
     WHEN 'golden-slipper-orchid' THEN 'advanced'
+    WHEN 'western-prairie-fringed-orchid' THEN 'advanced'
+    WHEN 'small-whorled-pogonia' THEN 'advanced'
+    WHEN 'grand-spider-orchid' THEN 'advanced'
+    WHEN 'queen-of-sheba-orchid' THEN 'advanced'
+    WHEN 'navasota-ladies-tresses' THEN 'advanced'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'bright-indirect'
@@ -1157,6 +1232,11 @@ SELECT
     WHEN 'purple-paphiopedilum' THEN 'medium'
     WHEN 'kovachs-phragmipedium' THEN 'medium'
     WHEN 'golden-slipper-orchid' THEN 'medium'
+    WHEN 'western-prairie-fringed-orchid' THEN 'high'
+    WHEN 'small-whorled-pogonia' THEN 'low'
+    WHEN 'grand-spider-orchid' THEN 'bright-indirect'
+    WHEN 'queen-of-sheba-orchid' THEN 'high'
+    WHEN 'navasota-ladies-tresses' THEN 'bright-indirect'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'moderate'
@@ -1229,6 +1309,11 @@ SELECT
     WHEN 'purple-paphiopedilum' THEN 'moderate'
     WHEN 'kovachs-phragmipedium' THEN 'frequent'
     WHEN 'golden-slipper-orchid' THEN 'moderate'
+    WHEN 'western-prairie-fringed-orchid' THEN 'moderate'
+    WHEN 'small-whorled-pogonia' THEN 'moderate'
+    WHEN 'grand-spider-orchid' THEN 'low'
+    WHEN 'queen-of-sheba-orchid' THEN 'low'
+    WHEN 'navasota-ladies-tresses' THEN 'moderate'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 50
@@ -1301,6 +1386,11 @@ SELECT
     WHEN 'purple-paphiopedilum' THEN 60
     WHEN 'kovachs-phragmipedium' THEN 70
     WHEN 'golden-slipper-orchid' THEN 60
+    WHEN 'western-prairie-fringed-orchid' THEN 45
+    WHEN 'small-whorled-pogonia' THEN 50
+    WHEN 'grand-spider-orchid' THEN 35
+    WHEN 'queen-of-sheba-orchid' THEN 35
+    WHEN 'navasota-ladies-tresses' THEN 45
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 70
@@ -1373,6 +1463,11 @@ SELECT
     WHEN 'purple-paphiopedilum' THEN 85
     WHEN 'kovachs-phragmipedium' THEN 90
     WHEN 'golden-slipper-orchid' THEN 80
+    WHEN 'western-prairie-fringed-orchid' THEN 75
+    WHEN 'small-whorled-pogonia' THEN 80
+    WHEN 'grand-spider-orchid' THEN 70
+    WHEN 'queen-of-sheba-orchid' THEN 70
+    WHEN 'navasota-ladies-tresses' THEN 75
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 18
@@ -1445,6 +1540,11 @@ SELECT
     WHEN 'purple-paphiopedilum' THEN 14
     WHEN 'kovachs-phragmipedium' THEN 14
     WHEN 'golden-slipper-orchid' THEN 10
+    WHEN 'western-prairie-fringed-orchid' THEN 12
+    WHEN 'small-whorled-pogonia' THEN 10
+    WHEN 'grand-spider-orchid' THEN 8
+    WHEN 'queen-of-sheba-orchid' THEN 8
+    WHEN 'navasota-ladies-tresses' THEN 10
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 29
@@ -1517,6 +1617,11 @@ SELECT
     WHEN 'purple-paphiopedilum' THEN 28
     WHEN 'kovachs-phragmipedium' THEN 26
     WHEN 'golden-slipper-orchid' THEN 25
+    WHEN 'western-prairie-fringed-orchid' THEN 30
+    WHEN 'small-whorled-pogonia' THEN 26
+    WHEN 'grand-spider-orchid' THEN 24
+    WHEN 'queen-of-sheba-orchid' THEN 26
+    WHEN 'navasota-ladies-tresses' THEN 28
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Medium bark mix with good drainage and airflow.'
@@ -1589,6 +1694,11 @@ SELECT
     WHEN 'purple-paphiopedilum' THEN 'Moist but airy forest-floor mix with bark, leaf mold, and mineral drainage.'
     WHEN 'kovachs-phragmipedium' THEN 'Moist limestone-influenced mix with constant drainage and low-salt water.'
     WHEN 'golden-slipper-orchid' THEN 'Limestone-based mix with bark, grit, and steady but airy moisture.'
+    WHEN 'western-prairie-fringed-orchid' THEN 'Conservation-only prairie soil with native grasses, seasonal moisture, and intact fungal partners.'
+    WHEN 'small-whorled-pogonia' THEN 'Conservation-only acidic woodland soil with leaf litter, shade, and native mycorrhizae.'
+    WHEN 'grand-spider-orchid' THEN 'Conservation-only sandy Banksia woodland soil with winter moisture and summer dormancy.'
+    WHEN 'queen-of-sheba-orchid' THEN 'Conservation-only sandy heath soil with seasonal winter rain and dry summer rest.'
+    WHEN 'navasota-ladies-tresses' THEN 'Conservation-only sandy post-oak woodland soil with seasonal moisture and native fungi.'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'varies'
@@ -1661,6 +1771,11 @@ SELECT
     WHEN 'purple-paphiopedilum' THEN 'summer'
     WHEN 'kovachs-phragmipedium' THEN 'varies'
     WHEN 'golden-slipper-orchid' THEN 'spring'
+    WHEN 'western-prairie-fringed-orchid' THEN 'summer'
+    WHEN 'small-whorled-pogonia' THEN 'spring'
+    WHEN 'grand-spider-orchid' THEN 'spring'
+    WHEN 'queen-of-sheba-orchid' THEN 'spring'
+    WHEN 'navasota-ladies-tresses' THEN 'autumn'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Can bloom indoors for several months when kept warm and evenly cared for.'
@@ -1733,6 +1848,11 @@ SELECT
     WHEN 'purple-paphiopedilum' THEN 'Purple patterned flowers rise from shaded forest-floor growths.'
     WHEN 'kovachs-phragmipedium' THEN 'Huge rose-purple flowers appear from mature growths in moist limestone conditions.'
     WHEN 'golden-slipper-orchid' THEN 'Bright golden flowers appear above mottled leaves in cool bright seasons.'
+    WHEN 'western-prairie-fringed-orchid' THEN 'Tall spikes of white fringed flowers open in summer and are often night-fragrant.'
+    WHEN 'small-whorled-pogonia' THEN 'Small greenish flowers appear above whorled leaves in quiet woodland habitats.'
+    WHEN 'grand-spider-orchid' THEN 'Long spider-like flowers emerge from winter-wet sandy soils in spring.'
+    WHEN 'queen-of-sheba-orchid' THEN 'Brilliant multicolored sun-orchid flowers open in bright warm conditions.'
+    WHEN 'navasota-ladies-tresses' THEN 'White flowers spiral around upright stems in autumn woodland openings.'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Keep warm in bright indirect light, water when the bark is nearly dry, and avoid water sitting in the crown.'
@@ -1805,6 +1925,11 @@ SELECT
     WHEN 'purple-paphiopedilum' THEN 'Provide shaded humidity, even moisture, and gentle airflow while avoiding stale wet media.'
     WHEN 'kovachs-phragmipedium' THEN 'Keep evenly moist with clean water, medium light, calcium-rich drainage, and cool-to-intermediate nights.'
     WHEN 'golden-slipper-orchid' THEN 'Give cool to intermediate conditions, medium light, limestone drainage, and a careful winter-to-spring rhythm.'
+    WHEN 'western-prairie-fringed-orchid' THEN 'Treat as conservation information only; survival depends on intact tallgrass prairie hydrology and pollinators.'
+    WHEN 'small-whorled-pogonia' THEN 'Treat as conservation information only; protect shaded woodland habitat, leaf litter, and soil fungi.'
+    WHEN 'grand-spider-orchid' THEN 'Treat as conservation information only; protect remnant sandy woodland habitat and seasonal dormancy.'
+    WHEN 'queen-of-sheba-orchid' THEN 'Treat as conservation information only; protect native heathland soil cycles and avoid wild collection.'
+    WHEN 'navasota-ladies-tresses' THEN 'Treat as conservation information only; protect Texas woodland openings and their natural soil relationships.'
   END
 FROM seeded_orchids;
 
@@ -1820,7 +1945,12 @@ WHERE slug IN (
   'hangs-paphiopedilum',
   'purple-paphiopedilum',
   'kovachs-phragmipedium',
-  'golden-slipper-orchid'
+  'golden-slipper-orchid',
+  'western-prairie-fringed-orchid',
+  'small-whorled-pogonia',
+  'grand-spider-orchid',
+  'queen-of-sheba-orchid',
+  'navasota-ladies-tresses'
 );
 
 COMMIT;
