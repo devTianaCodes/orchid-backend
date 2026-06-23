@@ -1065,6 +1065,76 @@ WITH seeded_orchids AS (
       'https://commons.wikimedia.org/wiki/File:Spiranthes_parksii.jpg',
       'CC BY 4.0',
       'Hugh D. Wilson, via Wikimedia Commons'
+    ),
+    (
+      'xerophytic-mexipedium',
+      'Xerophytic Mexipedium',
+      'Mexipedium xerophyticum',
+      'Mexipedium',
+      'A critically endangered miniature slipper orchid known from a very restricted limestone habitat.',
+      'Oaxaca, Mexico',
+      'lithophyte',
+      'https://upload.wikimedia.org/wikipedia/commons/b/bf/Mexipedium_xerophyticum_Orchi_008.jpg',
+      'Small white Mexipedium xerophyticum slipper orchid flowers on a compact plant.',
+      'https://commons.wikimedia.org/wiki/File:Mexipedium_xerophyticum_Orchi_008.jpg',
+      'CC BY-SA 3.0',
+      'Orchi, via Wikimedia Commons'
+    ),
+    (
+      'kentucky-ladys-slipper',
+      'Kentucky Lady''s Slipper',
+      'Cypripedium kentuckiense',
+      'Cypripedium',
+      'A rare North American lady slipper orchid with very large cream and maroon flowers.',
+      'South-central United States',
+      'terrestrial',
+      'https://upload.wikimedia.org/wikipedia/commons/e/e3/Cypripedium_kentuckiense_flower.jpg',
+      'Cypripedium kentuckiense flower with large cream pouch and maroon petals.',
+      'https://commons.wikimedia.org/wiki/File:Cypripedium_kentuckiense_flower.jpg',
+      'CC BY-SA 4.0',
+      'James Steakley, via Wikimedia Commons'
+    ),
+    (
+      'fen-orchid',
+      'Fen Orchid',
+      'Liparis loeselii',
+      'Liparis',
+      'A protected wetland orchid with small greenish flowers and declining fen habitats.',
+      'Europe and parts of eastern North America',
+      'terrestrial',
+      'https://upload.wikimedia.org/wikipedia/commons/a/aa/Groenknolorchis_-_fen_orchid_-_Liparis_loeselii_2.jpg',
+      'Liparis loeselii fen orchid plant in flower among wetland vegetation.',
+      'https://commons.wikimedia.org/wiki/File:Groenknolorchis_-_fen_orchid_-_Liparis_loeselii_2.jpg',
+      'CC BY 4.0',
+      'Bouke ten Cate, via Wikimedia Commons'
+    ),
+    (
+      'glossy-leaved-hammer-orchid',
+      'Glossy-leaved Hammer Orchid',
+      'Drakaea elastica',
+      'Drakaea',
+      'A critically endangered Western Australian hammer orchid with highly specialized wasp pollination.',
+      'Southwestern Western Australia',
+      'terrestrial',
+      'https://upload.wikimedia.org/wikipedia/commons/6/61/Drakaea_elastica_-_journal.pone.0059111.jpg',
+      'Drakaea elastica glossy-leaved hammer orchid flower with wasp-mimicking form.',
+      'https://commons.wikimedia.org/wiki/File:Drakaea_elastica_-_journal.pone.0059111.jpg',
+      'CC BY 2.5',
+      'Myles H. M. Menz, Ryan D. Phillips, Kingsley W. Dixon, Rod Peakall and Raphael K. Didham, via Wikimedia Commons'
+    ),
+    (
+      'showy-ladys-slipper',
+      'Showy Lady''s Slipper',
+      'Cypripedium reginae',
+      'Cypripedium',
+      'A protected wetland lady slipper orchid with large white and pink pouch flowers.',
+      'Northern North America',
+      'terrestrial',
+      'https://upload.wikimedia.org/wikipedia/commons/d/d2/Cypripedium_reginae_-_Presqu%27ile.jpg',
+      'Cypripedium reginae showy lady slipper orchid flower with white petals and pink pouch.',
+      'https://commons.wikimedia.org/wiki/File:Cypripedium_reginae_-_Presqu%27ile.jpg',
+      'CC BY-SA 4.0',
+      'The Cosmonaut, via Wikimedia Commons'
     )
   RETURNING id, slug
 )
@@ -1160,6 +1230,11 @@ SELECT
     WHEN 'grand-spider-orchid' THEN 'advanced'
     WHEN 'queen-of-sheba-orchid' THEN 'advanced'
     WHEN 'navasota-ladies-tresses' THEN 'advanced'
+    WHEN 'xerophytic-mexipedium' THEN 'advanced'
+    WHEN 'kentucky-ladys-slipper' THEN 'advanced'
+    WHEN 'fen-orchid' THEN 'advanced'
+    WHEN 'glossy-leaved-hammer-orchid' THEN 'advanced'
+    WHEN 'showy-ladys-slipper' THEN 'advanced'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'bright-indirect'
@@ -1237,6 +1312,11 @@ SELECT
     WHEN 'grand-spider-orchid' THEN 'bright-indirect'
     WHEN 'queen-of-sheba-orchid' THEN 'high'
     WHEN 'navasota-ladies-tresses' THEN 'bright-indirect'
+    WHEN 'xerophytic-mexipedium' THEN 'medium'
+    WHEN 'kentucky-ladys-slipper' THEN 'medium'
+    WHEN 'fen-orchid' THEN 'bright-indirect'
+    WHEN 'glossy-leaved-hammer-orchid' THEN 'bright-indirect'
+    WHEN 'showy-ladys-slipper' THEN 'medium'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'moderate'
@@ -1314,6 +1394,11 @@ SELECT
     WHEN 'grand-spider-orchid' THEN 'low'
     WHEN 'queen-of-sheba-orchid' THEN 'low'
     WHEN 'navasota-ladies-tresses' THEN 'moderate'
+    WHEN 'xerophytic-mexipedium' THEN 'moderate'
+    WHEN 'kentucky-ladys-slipper' THEN 'moderate'
+    WHEN 'fen-orchid' THEN 'frequent'
+    WHEN 'glossy-leaved-hammer-orchid' THEN 'low'
+    WHEN 'showy-ladys-slipper' THEN 'frequent'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 50
@@ -1391,6 +1476,11 @@ SELECT
     WHEN 'grand-spider-orchid' THEN 35
     WHEN 'queen-of-sheba-orchid' THEN 35
     WHEN 'navasota-ladies-tresses' THEN 45
+    WHEN 'xerophytic-mexipedium' THEN 45
+    WHEN 'kentucky-ladys-slipper' THEN 50
+    WHEN 'fen-orchid' THEN 60
+    WHEN 'glossy-leaved-hammer-orchid' THEN 35
+    WHEN 'showy-ladys-slipper' THEN 60
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 70
@@ -1468,6 +1558,11 @@ SELECT
     WHEN 'grand-spider-orchid' THEN 70
     WHEN 'queen-of-sheba-orchid' THEN 70
     WHEN 'navasota-ladies-tresses' THEN 75
+    WHEN 'xerophytic-mexipedium' THEN 75
+    WHEN 'kentucky-ladys-slipper' THEN 80
+    WHEN 'fen-orchid' THEN 90
+    WHEN 'glossy-leaved-hammer-orchid' THEN 70
+    WHEN 'showy-ladys-slipper' THEN 90
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 18
@@ -1545,6 +1640,11 @@ SELECT
     WHEN 'grand-spider-orchid' THEN 8
     WHEN 'queen-of-sheba-orchid' THEN 8
     WHEN 'navasota-ladies-tresses' THEN 10
+    WHEN 'xerophytic-mexipedium' THEN 12
+    WHEN 'kentucky-ladys-slipper' THEN 10
+    WHEN 'fen-orchid' THEN 8
+    WHEN 'glossy-leaved-hammer-orchid' THEN 8
+    WHEN 'showy-ladys-slipper' THEN 5
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 29
@@ -1622,6 +1722,11 @@ SELECT
     WHEN 'grand-spider-orchid' THEN 24
     WHEN 'queen-of-sheba-orchid' THEN 26
     WHEN 'navasota-ladies-tresses' THEN 28
+    WHEN 'xerophytic-mexipedium' THEN 27
+    WHEN 'kentucky-ladys-slipper' THEN 26
+    WHEN 'fen-orchid' THEN 24
+    WHEN 'glossy-leaved-hammer-orchid' THEN 24
+    WHEN 'showy-ladys-slipper' THEN 24
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Medium bark mix with good drainage and airflow.'
@@ -1699,6 +1804,11 @@ SELECT
     WHEN 'grand-spider-orchid' THEN 'Conservation-only sandy Banksia woodland soil with winter moisture and summer dormancy.'
     WHEN 'queen-of-sheba-orchid' THEN 'Conservation-only sandy heath soil with seasonal winter rain and dry summer rest.'
     WHEN 'navasota-ladies-tresses' THEN 'Conservation-only sandy post-oak woodland soil with seasonal moisture and native fungi.'
+    WHEN 'xerophytic-mexipedium' THEN 'Airy limestone-influenced mineral mix with careful moisture and strong drainage.'
+    WHEN 'kentucky-ladys-slipper' THEN 'Conservation-only humus-rich woodland soil with steady moisture and native fungi.'
+    WHEN 'fen-orchid' THEN 'Conservation-only calcareous fen soil with constant clean moisture and intact wetland hydrology.'
+    WHEN 'glossy-leaved-hammer-orchid' THEN 'Conservation-only sandy woodland soil with winter growth, summer dormancy, and native fungi.'
+    WHEN 'showy-ladys-slipper' THEN 'Conservation-only cool wetland soil with mossy moisture and native fungal partners.'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'varies'
@@ -1776,6 +1886,11 @@ SELECT
     WHEN 'grand-spider-orchid' THEN 'spring'
     WHEN 'queen-of-sheba-orchid' THEN 'spring'
     WHEN 'navasota-ladies-tresses' THEN 'autumn'
+    WHEN 'xerophytic-mexipedium' THEN 'varies'
+    WHEN 'kentucky-ladys-slipper' THEN 'spring'
+    WHEN 'fen-orchid' THEN 'summer'
+    WHEN 'glossy-leaved-hammer-orchid' THEN 'spring'
+    WHEN 'showy-ladys-slipper' THEN 'summer'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Can bloom indoors for several months when kept warm and evenly cared for.'
@@ -1853,6 +1968,11 @@ SELECT
     WHEN 'grand-spider-orchid' THEN 'Long spider-like flowers emerge from winter-wet sandy soils in spring.'
     WHEN 'queen-of-sheba-orchid' THEN 'Brilliant multicolored sun-orchid flowers open in bright warm conditions.'
     WHEN 'navasota-ladies-tresses' THEN 'White flowers spiral around upright stems in autumn woodland openings.'
+    WHEN 'xerophytic-mexipedium' THEN 'Tiny white slipper flowers appear from compact fan-shaped growths.'
+    WHEN 'kentucky-ladys-slipper' THEN 'Large pouch flowers rise above woodland leaves in late spring.'
+    WHEN 'fen-orchid' THEN 'Small greenish flowers form on slender spikes in open wet fen habitat.'
+    WHEN 'glossy-leaved-hammer-orchid' THEN 'Unusual hammer-like flowers mimic female wasps to attract specific pollinators.'
+    WHEN 'showy-ladys-slipper' THEN 'Large white and pink flowers open in cool wetland sites in early summer.'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Keep warm in bright indirect light, water when the bark is nearly dry, and avoid water sitting in the crown.'
@@ -1930,6 +2050,11 @@ SELECT
     WHEN 'grand-spider-orchid' THEN 'Treat as conservation information only; protect remnant sandy woodland habitat and seasonal dormancy.'
     WHEN 'queen-of-sheba-orchid' THEN 'Treat as conservation information only; protect native heathland soil cycles and avoid wild collection.'
     WHEN 'navasota-ladies-tresses' THEN 'Treat as conservation information only; protect Texas woodland openings and their natural soil relationships.'
+    WHEN 'xerophytic-mexipedium' THEN 'Grow only from legal propagated material; use airy mineral drainage, moderate shade, and careful clean water.'
+    WHEN 'kentucky-ladys-slipper' THEN 'Treat as conservation information only; protect woodland soil, fungal partners, and natural moisture cycles.'
+    WHEN 'fen-orchid' THEN 'Treat as conservation information only; protect open fen hydrology, low nutrients, and wetland succession.'
+    WHEN 'glossy-leaved-hammer-orchid' THEN 'Treat as conservation information only; protect pollinator habitat, native fungi, and seasonal sandy soils.'
+    WHEN 'showy-ladys-slipper' THEN 'Treat as conservation information only; protect cool wetland habitat and never collect wild plants.'
   END
 FROM seeded_orchids;
 
@@ -1950,7 +2075,12 @@ WHERE slug IN (
   'small-whorled-pogonia',
   'grand-spider-orchid',
   'queen-of-sheba-orchid',
-  'navasota-ladies-tresses'
+  'navasota-ladies-tresses',
+  'xerophytic-mexipedium',
+  'kentucky-ladys-slipper',
+  'fen-orchid',
+  'glossy-leaved-hammer-orchid',
+  'showy-ladys-slipper'
 );
 
 COMMIT;
