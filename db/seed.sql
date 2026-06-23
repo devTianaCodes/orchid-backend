@@ -855,6 +855,76 @@ WITH seeded_orchids AS (
       'https://commons.wikimedia.org/wiki/File:Cycnoches_cooperi_(14300697305)_-_cropped_2.jpg',
       'CC BY-SA 2.0',
       'Alejandro Bayer Tamayo from Armenia, Colombia, via Wikimedia Commons'
+    ),
+    (
+      'ghost-orchid',
+      'Ghost Orchid',
+      'Dendrophylax lindenii',
+      'Dendrophylax',
+      'A leafless swamp epiphyte whose white flowers appear to float from tree bark.',
+      'Florida and Cuba',
+      'epiphyte',
+      'https://upload.wikimedia.org/wikipedia/commons/d/d1/Dendrophylax_lindenii_cultivated_by_Jeff_Hale.JPG',
+      'White Dendrophylax lindenii ghost orchid flower on a leafless root mass.',
+      'https://commons.wikimedia.org/wiki/File:Dendrophylax_lindenii_cultivated_by_Jeff_Hale.JPG',
+      'CC BY-SA 3.0',
+      'Jeffalanhale, via Wikimedia Commons'
+    ),
+    (
+      'rothschilds-slipper-orchid',
+      'Rothschild''s Slipper Orchid',
+      'Paphiopedilum rothschildianum',
+      'Paphiopedilum',
+      'A critically endangered slipper orchid from Mount Kinabalu with broad striped flowers.',
+      'Mount Kinabalu, Sabah, Borneo',
+      'lithophyte',
+      'https://upload.wikimedia.org/wikipedia/commons/4/48/Paphiopedilum_rothschildianum_%2838895501350%29.jpg',
+      'Paphiopedilum rothschildianum slipper orchid flowers with striped horizontal petals.',
+      'https://commons.wikimedia.org/wiki/File:Paphiopedilum_rothschildianum_(38895501350).jpg',
+      'CC BY-SA 2.0',
+      'Naoki Takebayashi, via Wikimedia Commons'
+    ),
+    (
+      'sanders-paphiopedilum',
+      'Sander''s Paphiopedilum',
+      'Paphiopedilum sanderianum',
+      'Paphiopedilum',
+      'A legendary Bornean slipper orchid famous for extremely long ribbon-like petals.',
+      'Gunung Mulu, northwestern Borneo',
+      'lithophyte',
+      'https://upload.wikimedia.org/wikipedia/commons/c/c9/Paphiopedilum_sanderianum_%28plant%29.jpg',
+      'Paphiopedilum sanderianum plant with long pendant flower petals.',
+      'https://commons.wikimedia.org/wiki/File:Paphiopedilum_sanderianum_(plant).jpg',
+      'CC BY-SA 4.0',
+      'Naoki Takebayashi, via Wikimedia Commons'
+    ),
+    (
+      'canhs-paphiopedilum',
+      'Canh''s Paphiopedilum',
+      'Paphiopedilum canhii',
+      'Paphiopedilum',
+      'A tiny critically endangered slipper orchid from limestone habitats in northern Indochina.',
+      'Northern Vietnam, Laos, and southern China',
+      'lithophyte',
+      'https://upload.wikimedia.org/wikipedia/commons/9/90/Paphiopedilum_canhii_flower_front_view.jpg',
+      'Front view of a Paphiopedilum canhii flower with a small pouch-shaped lip.',
+      'https://commons.wikimedia.org/wiki/File:Paphiopedilum_canhii_flower_front_view.jpg',
+      'CC BY-SA 4.0',
+      'Pham van The, via Wikimedia Commons'
+    ),
+    (
+      'western-underground-orchid',
+      'Western Underground Orchid',
+      'Rhizanthella gardneri',
+      'Rhizanthella',
+      'A critically endangered orchid that flowers at or below the soil surface.',
+      'Southwestern Western Australia',
+      'terrestrial',
+      'https://upload.wikimedia.org/wikipedia/commons/4/49/Rhizanthella_gardneri_%E2%80%94_Fred_Hort.jpg',
+      'Exposed Rhizanthella gardneri western underground orchid flower head.',
+      'https://commons.wikimedia.org/wiki/File:Rhizanthella_gardneri_%E2%80%94_Fred_Hort.jpg',
+      'CC BY-SA 2.0',
+      'Jean and Fred Hort, via Wikimedia Commons'
     )
   RETURNING id, slug
 )
@@ -935,6 +1005,11 @@ SELECT
     WHEN 'mini-erycina' THEN 'intermediate'
     WHEN 'bamboo-orchid' THEN 'beginner'
     WHEN 'cooper-cycnoches' THEN 'advanced'
+    WHEN 'ghost-orchid' THEN 'advanced'
+    WHEN 'rothschilds-slipper-orchid' THEN 'advanced'
+    WHEN 'sanders-paphiopedilum' THEN 'advanced'
+    WHEN 'canhs-paphiopedilum' THEN 'advanced'
+    WHEN 'western-underground-orchid' THEN 'advanced'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'bright-indirect'
@@ -997,6 +1072,11 @@ SELECT
     WHEN 'mini-erycina' THEN 'bright-indirect'
     WHEN 'bamboo-orchid' THEN 'high'
     WHEN 'cooper-cycnoches' THEN 'bright-indirect'
+    WHEN 'ghost-orchid' THEN 'bright-indirect'
+    WHEN 'rothschilds-slipper-orchid' THEN 'medium'
+    WHEN 'sanders-paphiopedilum' THEN 'medium'
+    WHEN 'canhs-paphiopedilum' THEN 'medium'
+    WHEN 'western-underground-orchid' THEN 'low'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'moderate'
@@ -1059,6 +1139,11 @@ SELECT
     WHEN 'mini-erycina' THEN 'moderate'
     WHEN 'bamboo-orchid' THEN 'moderate'
     WHEN 'cooper-cycnoches' THEN 'moderate'
+    WHEN 'ghost-orchid' THEN 'frequent'
+    WHEN 'rothschilds-slipper-orchid' THEN 'moderate'
+    WHEN 'sanders-paphiopedilum' THEN 'moderate'
+    WHEN 'canhs-paphiopedilum' THEN 'moderate'
+    WHEN 'western-underground-orchid' THEN 'moderate'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 50
@@ -1121,6 +1206,11 @@ SELECT
     WHEN 'mini-erycina' THEN 55
     WHEN 'bamboo-orchid' THEN 50
     WHEN 'cooper-cycnoches' THEN 50
+    WHEN 'ghost-orchid' THEN 75
+    WHEN 'rothschilds-slipper-orchid' THEN 60
+    WHEN 'sanders-paphiopedilum' THEN 70
+    WHEN 'canhs-paphiopedilum' THEN 70
+    WHEN 'western-underground-orchid' THEN 50
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 70
@@ -1183,6 +1273,11 @@ SELECT
     WHEN 'mini-erycina' THEN 80
     WHEN 'bamboo-orchid' THEN 80
     WHEN 'cooper-cycnoches' THEN 80
+    WHEN 'ghost-orchid' THEN 95
+    WHEN 'rothschilds-slipper-orchid' THEN 80
+    WHEN 'sanders-paphiopedilum' THEN 85
+    WHEN 'canhs-paphiopedilum' THEN 90
+    WHEN 'western-underground-orchid' THEN 80
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 18
@@ -1245,6 +1340,11 @@ SELECT
     WHEN 'mini-erycina' THEN 16
     WHEN 'bamboo-orchid' THEN 18
     WHEN 'cooper-cycnoches' THEN 18
+    WHEN 'ghost-orchid' THEN 18
+    WHEN 'rothschilds-slipper-orchid' THEN 16
+    WHEN 'sanders-paphiopedilum' THEN 20
+    WHEN 'canhs-paphiopedilum' THEN 16
+    WHEN 'western-underground-orchid' THEN 10
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 29
@@ -1307,6 +1407,11 @@ SELECT
     WHEN 'mini-erycina' THEN 28
     WHEN 'bamboo-orchid' THEN 32
     WHEN 'cooper-cycnoches' THEN 32
+    WHEN 'ghost-orchid' THEN 30
+    WHEN 'rothschilds-slipper-orchid' THEN 29
+    WHEN 'sanders-paphiopedilum' THEN 28
+    WHEN 'canhs-paphiopedilum' THEN 25
+    WHEN 'western-underground-orchid' THEN 24
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Medium bark mix with good drainage and airflow.'
@@ -1369,6 +1474,11 @@ SELECT
     WHEN 'mini-erycina' THEN 'Mounted culture or a tiny airy pot with fine bark and quick drainage.'
     WHEN 'bamboo-orchid' THEN 'Loose terrestrial mix with organic matter and excellent drainage.'
     WHEN 'cooper-cycnoches' THEN 'Medium bark or sphagnum mix for growth, kept much drier during dormancy.'
+    WHEN 'ghost-orchid' THEN 'Mounted culture on untreated wood with constant humidity and no stale standing water.'
+    WHEN 'rothschilds-slipper-orchid' THEN 'Open slipper orchid mix with bark, perlite, and limestone or mineral grit.'
+    WHEN 'sanders-paphiopedilum' THEN 'Limestone-influenced slipper orchid mix with bark, moss, and excellent drainage.'
+    WHEN 'canhs-paphiopedilum' THEN 'Limestone-style mineral mix kept airy, shaded, and evenly humid.'
+    WHEN 'western-underground-orchid' THEN 'Conservation-only mycorrhizal habitat tied to broombush roots and native fungi.'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'varies'
@@ -1431,6 +1541,11 @@ SELECT
     WHEN 'mini-erycina' THEN 'varies'
     WHEN 'bamboo-orchid' THEN 'varies'
     WHEN 'cooper-cycnoches' THEN 'autumn'
+    WHEN 'ghost-orchid' THEN 'summer'
+    WHEN 'rothschilds-slipper-orchid' THEN 'spring'
+    WHEN 'sanders-paphiopedilum' THEN 'spring'
+    WHEN 'canhs-paphiopedilum' THEN 'spring'
+    WHEN 'western-underground-orchid' THEN 'winter'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Can bloom indoors for several months when kept warm and evenly cared for.'
@@ -1493,6 +1608,11 @@ SELECT
     WHEN 'mini-erycina' THEN 'Tiny yellow flowers reward stable humidity and careful watering.'
     WHEN 'bamboo-orchid' THEN 'Tall reed-like stems can produce bright pink flowers repeatedly in warm climates.'
     WHEN 'cooper-cycnoches' THEN 'Waxy flowers appear from mature deciduous growths before the dry rest.'
+    WHEN 'ghost-orchid' THEN 'White fragrant flowers emerge from leafless roots and seem suspended against bark.'
+    WHEN 'rothschilds-slipper-orchid' THEN 'Large striped flowers open on tall spikes and can take years of patient growth.'
+    WHEN 'sanders-paphiopedilum' THEN 'Long ribbon-like petals can hang dramatically from the slipper-shaped flowers.'
+    WHEN 'canhs-paphiopedilum' THEN 'Small solitary flowers appear from compact plants in limestone cliff habitats.'
+    WHEN 'western-underground-orchid' THEN 'Flower heads form underground and may only slightly break the soil surface.'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Keep warm in bright indirect light, water when the bark is nearly dry, and avoid water sitting in the crown.'
@@ -1555,7 +1675,22 @@ SELECT
     WHEN 'mini-erycina' THEN 'Use bright filtered light, high humidity, and a very airy root zone that never stays soggy.'
     WHEN 'bamboo-orchid' THEN 'Give warm bright conditions, regular watering, and a free-draining terrestrial mix.'
     WHEN 'cooper-cycnoches' THEN 'Water and feed during active growth, then keep much drier after leaves yellow and drop.'
+    WHEN 'ghost-orchid' THEN 'Maintain very high humidity, pure water, bright shade, and strong care around the exposed roots.'
+    WHEN 'rothschilds-slipper-orchid' THEN 'Grow evenly moist in moderate light with cool nights, clean water, and patient airflow.'
+    WHEN 'sanders-paphiopedilum' THEN 'Keep warm, shaded, humid, and evenly moist in an airy limestone-influenced mix.'
+    WHEN 'canhs-paphiopedilum' THEN 'Keep shaded, humid, and cool to intermediate; this is best treated as conservation-level culture.'
+    WHEN 'western-underground-orchid' THEN 'Treat as conservation information only; survival depends on native fungi and host-plant habitat.'
   END
 FROM seeded_orchids;
+
+UPDATE orchids
+SET is_rare = TRUE
+WHERE slug IN (
+  'ghost-orchid',
+  'rothschilds-slipper-orchid',
+  'sanders-paphiopedilum',
+  'canhs-paphiopedilum',
+  'western-underground-orchid'
+);
 
 COMMIT;
