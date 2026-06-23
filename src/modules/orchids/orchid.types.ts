@@ -47,6 +47,7 @@ export type OrchidListFilters = {
   temperature?: number;
   growthType?: OrchidGrowthType;
   bloomSeason?: OrchidBloomSeason;
+  isRare?: boolean;
   page: number;
   pageSize: number;
 };

@@ -152,6 +152,16 @@ function parseListFilters(request: Request): ParseResult {
     filters.temperature = temperature.value;
   }
 
+  const isRare = parseBooleanQueryValue("isRare", query.isRare);
+
+  if ("error" in isRare) {
+    return isRare;
+  }
+
+  if (typeof isRare.value === "boolean") {
+    filters.isRare = isRare.value;
+  }
+
   const growthType = getSingleQueryValue(query.growthType);
 
   if (growthType) {
@@ -239,6 +249,27 @@ function parseNumberQueryValue(
   }
 
   return { value: parsedValue };
+}
+
+function parseBooleanQueryValue(
+  name: string,
+  value: Request["query"][string],
+): { value?: boolean } | { error: string } {
+  const rawValue = getSingleQueryValue(value);
+
+  if (!rawValue) {
+    return {};
+  }
+
+  if (rawValue === "true") {
+    return { value: true };
+  }
+
+  if (rawValue === "false") {
+    return { value: false };
+  }
+
+  return { error: `${name} must be true or false` };
 }
 
 function parsePositiveIntegerQueryValue(

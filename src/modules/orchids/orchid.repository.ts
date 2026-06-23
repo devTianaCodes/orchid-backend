@@ -200,7 +200,7 @@ function mapOrchidListRow(row: OrchidListRow): OrchidListItem {
 }
 
 function buildListFilterQuery(filters: OrchidListFilters) {
-  const params: Array<number | string> = [];
+  const params: Array<boolean | number | string> = [];
   const whereClauses: string[] = [];
 
   if (filters.q) {
@@ -251,6 +251,11 @@ function buildListFilterQuery(filters: OrchidListFilters) {
   if (filters.bloomSeason) {
     params.push(filters.bloomSeason);
     whereClauses.push(`orchid_care_profiles.bloom_season = $${params.length}`);
+  }
+
+  if (typeof filters.isRare === "boolean") {
+    params.push(filters.isRare);
+    whereClauses.push(`orchids.is_rare = $${params.length}`);
   }
 
   return {
