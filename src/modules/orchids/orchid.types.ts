@@ -14,6 +14,7 @@ export type OrchidListItem = {
   scientificName: string;
   genus: string;
   shortDescription: string;
+  isRare: boolean;
   growthType: OrchidGrowthType;
   difficulty: OrchidDifficulty;
   lightNeeds: OrchidLightNeeds;

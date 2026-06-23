@@ -26,6 +26,7 @@ type OrchidListRow = {
   scientific_name: string;
   genus: string;
   short_description: string;
+  is_rare: boolean;
   growth_type: OrchidListItem["growthType"];
   difficulty: OrchidListItem["difficulty"];
   light_needs: OrchidListItem["lightNeeds"];
@@ -89,6 +90,7 @@ export function createOrchidRepository(pool: Pool): OrchidRepository {
           orchids.scientific_name,
           orchids.genus,
           orchids.short_description,
+          orchids.is_rare,
           orchids.growth_type,
           orchid_care_profiles.difficulty,
           orchid_care_profiles.light_needs,
@@ -122,6 +124,7 @@ export function createOrchidRepository(pool: Pool): OrchidRepository {
           orchids.genus,
           orchids.short_description,
           orchids.native_region,
+          orchids.is_rare,
           orchids.growth_type,
           orchid_care_profiles.difficulty,
           orchid_care_profiles.light_needs,
@@ -185,6 +188,7 @@ function mapOrchidListRow(row: OrchidListRow): OrchidListItem {
     scientificName: row.scientific_name,
     genus: row.genus,
     shortDescription: row.short_description,
+    isRare: row.is_rare,
     growthType: row.growth_type,
     difficulty: row.difficulty,
     lightNeeds: row.light_needs,

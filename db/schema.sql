@@ -11,6 +11,7 @@ CREATE TABLE orchids (
   genus TEXT NOT NULL,
   short_description TEXT NOT NULL,
   native_region TEXT NOT NULL,
+  is_rare BOOLEAN NOT NULL DEFAULT FALSE,
   growth_type TEXT NOT NULL CHECK (
     growth_type IN ('epiphyte', 'terrestrial', 'lithophyte', 'semi-terrestrial')
   ),
