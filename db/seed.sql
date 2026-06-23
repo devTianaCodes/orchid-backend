@@ -925,6 +925,76 @@ WITH seeded_orchids AS (
       'https://commons.wikimedia.org/wiki/File:Rhizanthella_gardneri_%E2%80%94_Fred_Hort.jpg',
       'CC BY-SA 2.0',
       'Jean and Fred Hort, via Wikimedia Commons'
+    ),
+    (
+      'vietnamese-paphiopedilum',
+      'Vietnamese Paphiopedilum',
+      'Paphiopedilum vietnamense',
+      'Paphiopedilum',
+      'An endangered Vietnamese slipper orchid with soft pink flowers and a rounded pouch.',
+      'Thai Nguyen Province, northern Vietnam',
+      'lithophyte',
+      'https://upload.wikimedia.org/wikipedia/commons/e/eb/Paphiopedilum_vietnamense.jpg',
+      'Pink Paphiopedilum vietnamense slipper orchid flower with a rounded pouch.',
+      'https://commons.wikimedia.org/wiki/File:Paphiopedilum_vietnamense.jpg',
+      'CC BY-SA 4.0',
+      'Patricia Harding, via Wikimedia Commons'
+    ),
+    (
+      'hangs-paphiopedilum',
+      'Hang''s Paphiopedilum',
+      'Paphiopedilum hangianum',
+      'Paphiopedilum',
+      'An endangered large-flowered slipper orchid from limestone forests of Vietnam and China.',
+      'Northern Vietnam and south-central China',
+      'lithophyte',
+      'https://upload.wikimedia.org/wikipedia/commons/4/4b/Paphiopedilum_hangianum_cropped.jpg',
+      'Pale yellow Paphiopedilum hangianum slipper orchid flower with broad petals.',
+      'https://commons.wikimedia.org/wiki/File:Paphiopedilum_hangianum_cropped.jpg',
+      'CC BY-SA 2.0',
+      'Felix, via Wikimedia Commons'
+    ),
+    (
+      'purple-paphiopedilum',
+      'Purple Paphiopedilum',
+      'Paphiopedilum purpuratum',
+      'Paphiopedilum',
+      'A critically endangered forest slipper orchid with purple and green patterned flowers.',
+      'Southern China, Hong Kong, and Hainan',
+      'terrestrial',
+      'https://upload.wikimedia.org/wikipedia/commons/3/33/Paphiopedilum_purpuratum1.jpg',
+      'Paphiopedilum purpuratum flower with purple pouch and patterned dorsal sepal.',
+      'https://commons.wikimedia.org/wiki/File:Paphiopedilum_purpuratum1.jpg',
+      'CC BY-SA 3.0',
+      'KENPEI, via Wikimedia Commons'
+    ),
+    (
+      'kovachs-phragmipedium',
+      'Kovach''s Phragmipedium',
+      'Phragmipedium kovachii',
+      'Phragmipedium',
+      'A critically endangered Peruvian slipper orchid known for very large rose-purple flowers.',
+      'Northern Peru',
+      'lithophyte',
+      'https://upload.wikimedia.org/wikipedia/commons/0/0a/Phragmipedium_kovachii_bloom.jpg',
+      'Large rose-purple Phragmipedium kovachii slipper orchid flower.',
+      'https://commons.wikimedia.org/wiki/File:Phragmipedium_kovachii_bloom.jpg',
+      'CC0',
+      'Achamore, via Wikimedia Commons'
+    ),
+    (
+      'golden-slipper-orchid',
+      'Golden Slipper Orchid',
+      'Paphiopedilum armeniacum',
+      'Paphiopedilum',
+      'An endangered golden-yellow slipper orchid from limestone habitats in Yunnan.',
+      'Yunnan, China',
+      'lithophyte',
+      'https://upload.wikimedia.org/wikipedia/commons/b/b1/Paphiopedilum_armeniacum_001_GotBot_2018.jpg',
+      'Golden-yellow Paphiopedilum armeniacum slipper orchid flower.',
+      'https://commons.wikimedia.org/wiki/File:Paphiopedilum_armeniacum_001_GotBot_2018.jpg',
+      'CC BY 4.0',
+      'Averater, via Wikimedia Commons'
     )
   RETURNING id, slug
 )
@@ -1010,6 +1080,11 @@ SELECT
     WHEN 'sanders-paphiopedilum' THEN 'advanced'
     WHEN 'canhs-paphiopedilum' THEN 'advanced'
     WHEN 'western-underground-orchid' THEN 'advanced'
+    WHEN 'vietnamese-paphiopedilum' THEN 'advanced'
+    WHEN 'hangs-paphiopedilum' THEN 'advanced'
+    WHEN 'purple-paphiopedilum' THEN 'advanced'
+    WHEN 'kovachs-phragmipedium' THEN 'advanced'
+    WHEN 'golden-slipper-orchid' THEN 'advanced'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'bright-indirect'
@@ -1077,6 +1152,11 @@ SELECT
     WHEN 'sanders-paphiopedilum' THEN 'medium'
     WHEN 'canhs-paphiopedilum' THEN 'medium'
     WHEN 'western-underground-orchid' THEN 'low'
+    WHEN 'vietnamese-paphiopedilum' THEN 'medium'
+    WHEN 'hangs-paphiopedilum' THEN 'medium'
+    WHEN 'purple-paphiopedilum' THEN 'medium'
+    WHEN 'kovachs-phragmipedium' THEN 'medium'
+    WHEN 'golden-slipper-orchid' THEN 'medium'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'moderate'
@@ -1144,6 +1224,11 @@ SELECT
     WHEN 'sanders-paphiopedilum' THEN 'moderate'
     WHEN 'canhs-paphiopedilum' THEN 'moderate'
     WHEN 'western-underground-orchid' THEN 'moderate'
+    WHEN 'vietnamese-paphiopedilum' THEN 'moderate'
+    WHEN 'hangs-paphiopedilum' THEN 'moderate'
+    WHEN 'purple-paphiopedilum' THEN 'moderate'
+    WHEN 'kovachs-phragmipedium' THEN 'frequent'
+    WHEN 'golden-slipper-orchid' THEN 'moderate'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 50
@@ -1211,6 +1296,11 @@ SELECT
     WHEN 'sanders-paphiopedilum' THEN 70
     WHEN 'canhs-paphiopedilum' THEN 70
     WHEN 'western-underground-orchid' THEN 50
+    WHEN 'vietnamese-paphiopedilum' THEN 60
+    WHEN 'hangs-paphiopedilum' THEN 60
+    WHEN 'purple-paphiopedilum' THEN 60
+    WHEN 'kovachs-phragmipedium' THEN 70
+    WHEN 'golden-slipper-orchid' THEN 60
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 70
@@ -1278,6 +1368,11 @@ SELECT
     WHEN 'sanders-paphiopedilum' THEN 85
     WHEN 'canhs-paphiopedilum' THEN 90
     WHEN 'western-underground-orchid' THEN 80
+    WHEN 'vietnamese-paphiopedilum' THEN 85
+    WHEN 'hangs-paphiopedilum' THEN 85
+    WHEN 'purple-paphiopedilum' THEN 85
+    WHEN 'kovachs-phragmipedium' THEN 90
+    WHEN 'golden-slipper-orchid' THEN 80
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 18
@@ -1345,6 +1440,11 @@ SELECT
     WHEN 'sanders-paphiopedilum' THEN 20
     WHEN 'canhs-paphiopedilum' THEN 16
     WHEN 'western-underground-orchid' THEN 10
+    WHEN 'vietnamese-paphiopedilum' THEN 15
+    WHEN 'hangs-paphiopedilum' THEN 12
+    WHEN 'purple-paphiopedilum' THEN 14
+    WHEN 'kovachs-phragmipedium' THEN 14
+    WHEN 'golden-slipper-orchid' THEN 10
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 29
@@ -1412,6 +1512,11 @@ SELECT
     WHEN 'sanders-paphiopedilum' THEN 28
     WHEN 'canhs-paphiopedilum' THEN 25
     WHEN 'western-underground-orchid' THEN 24
+    WHEN 'vietnamese-paphiopedilum' THEN 26
+    WHEN 'hangs-paphiopedilum' THEN 26
+    WHEN 'purple-paphiopedilum' THEN 28
+    WHEN 'kovachs-phragmipedium' THEN 26
+    WHEN 'golden-slipper-orchid' THEN 25
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Medium bark mix with good drainage and airflow.'
@@ -1479,6 +1584,11 @@ SELECT
     WHEN 'sanders-paphiopedilum' THEN 'Limestone-influenced slipper orchid mix with bark, moss, and excellent drainage.'
     WHEN 'canhs-paphiopedilum' THEN 'Limestone-style mineral mix kept airy, shaded, and evenly humid.'
     WHEN 'western-underground-orchid' THEN 'Conservation-only mycorrhizal habitat tied to broombush roots and native fungi.'
+    WHEN 'vietnamese-paphiopedilum' THEN 'Airy limestone-influenced slipper orchid mix with fine bark and mineral drainage.'
+    WHEN 'hangs-paphiopedilum' THEN 'Calcareous slipper orchid mix with bark, perlite, and mineral grit.'
+    WHEN 'purple-paphiopedilum' THEN 'Moist but airy forest-floor mix with bark, leaf mold, and mineral drainage.'
+    WHEN 'kovachs-phragmipedium' THEN 'Moist limestone-influenced mix with constant drainage and low-salt water.'
+    WHEN 'golden-slipper-orchid' THEN 'Limestone-based mix with bark, grit, and steady but airy moisture.'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'varies'
@@ -1546,6 +1656,11 @@ SELECT
     WHEN 'sanders-paphiopedilum' THEN 'spring'
     WHEN 'canhs-paphiopedilum' THEN 'spring'
     WHEN 'western-underground-orchid' THEN 'winter'
+    WHEN 'vietnamese-paphiopedilum' THEN 'spring'
+    WHEN 'hangs-paphiopedilum' THEN 'spring'
+    WHEN 'purple-paphiopedilum' THEN 'summer'
+    WHEN 'kovachs-phragmipedium' THEN 'varies'
+    WHEN 'golden-slipper-orchid' THEN 'spring'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Can bloom indoors for several months when kept warm and evenly cared for.'
@@ -1613,6 +1728,11 @@ SELECT
     WHEN 'sanders-paphiopedilum' THEN 'Long ribbon-like petals can hang dramatically from the slipper-shaped flowers.'
     WHEN 'canhs-paphiopedilum' THEN 'Small solitary flowers appear from compact plants in limestone cliff habitats.'
     WHEN 'western-underground-orchid' THEN 'Flower heads form underground and may only slightly break the soil surface.'
+    WHEN 'vietnamese-paphiopedilum' THEN 'Soft pink flowers open from compact growths and can last for weeks.'
+    WHEN 'hangs-paphiopedilum' THEN 'Large pale yellow flowers appear singly and are prized for their broad rounded form.'
+    WHEN 'purple-paphiopedilum' THEN 'Purple patterned flowers rise from shaded forest-floor growths.'
+    WHEN 'kovachs-phragmipedium' THEN 'Huge rose-purple flowers appear from mature growths in moist limestone conditions.'
+    WHEN 'golden-slipper-orchid' THEN 'Bright golden flowers appear above mottled leaves in cool bright seasons.'
   END,
   CASE slug
     WHEN 'moth-orchid' THEN 'Keep warm in bright indirect light, water when the bark is nearly dry, and avoid water sitting in the crown.'
@@ -1680,6 +1800,11 @@ SELECT
     WHEN 'sanders-paphiopedilum' THEN 'Keep warm, shaded, humid, and evenly moist in an airy limestone-influenced mix.'
     WHEN 'canhs-paphiopedilum' THEN 'Keep shaded, humid, and cool to intermediate; this is best treated as conservation-level culture.'
     WHEN 'western-underground-orchid' THEN 'Treat as conservation information only; survival depends on native fungi and host-plant habitat.'
+    WHEN 'vietnamese-paphiopedilum' THEN 'Keep shaded and evenly moist with clean water, mineral drainage, and stable intermediate temperatures.'
+    WHEN 'hangs-paphiopedilum' THEN 'Grow in moderate shade with cool nights, steady humidity, and a calcareous airy root zone.'
+    WHEN 'purple-paphiopedilum' THEN 'Provide shaded humidity, even moisture, and gentle airflow while avoiding stale wet media.'
+    WHEN 'kovachs-phragmipedium' THEN 'Keep evenly moist with clean water, medium light, calcium-rich drainage, and cool-to-intermediate nights.'
+    WHEN 'golden-slipper-orchid' THEN 'Give cool to intermediate conditions, medium light, limestone drainage, and a careful winter-to-spring rhythm.'
   END
 FROM seeded_orchids;
 
@@ -1690,7 +1815,12 @@ WHERE slug IN (
   'rothschilds-slipper-orchid',
   'sanders-paphiopedilum',
   'canhs-paphiopedilum',
-  'western-underground-orchid'
+  'western-underground-orchid',
+  'vietnamese-paphiopedilum',
+  'hangs-paphiopedilum',
+  'purple-paphiopedilum',
+  'kovachs-phragmipedium',
+  'golden-slipper-orchid'
 );
 
 COMMIT;
