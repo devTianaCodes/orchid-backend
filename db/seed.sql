@@ -864,11 +864,11 @@ WITH seeded_orchids AS (
       'A leafless swamp epiphyte whose white flowers appear to float from tree bark.',
       'Florida and Cuba',
       'epiphyte',
-      'https://upload.wikimedia.org/wikipedia/commons/d/d1/Dendrophylax_lindenii_cultivated_by_Jeff_Hale.JPG',
+      'https://upload.wikimedia.org/wikipedia/commons/8/87/Ghost_Orchid.jpg',
       'White Dendrophylax lindenii ghost orchid flower on a leafless root mass.',
-      'https://commons.wikimedia.org/wiki/File:Dendrophylax_lindenii_cultivated_by_Jeff_Hale.JPG',
-      'CC BY-SA 3.0',
-      'Jeffalanhale, via Wikimedia Commons'
+      'https://commons.wikimedia.org/wiki/File:Ghost_Orchid.jpg',
+      'CC BY 2.5',
+      'Mick Fournier / HBI Producers of Fine Orchids, via Wikimedia Commons'
     ),
     (
       'rothschilds-slipper-orchid',
@@ -878,9 +878,9 @@ WITH seeded_orchids AS (
       'A critically endangered slipper orchid from Mount Kinabalu with broad striped flowers.',
       'Mount Kinabalu, Sabah, Borneo',
       'lithophyte',
-      'https://upload.wikimedia.org/wikipedia/commons/4/48/Paphiopedilum_rothschildianum_%2838895501350%29.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/3/3a/Paphiopedilum_rothschildianum_%2825834537567%29.jpg',
       'Paphiopedilum rothschildianum slipper orchid flowers with striped horizontal petals.',
-      'https://commons.wikimedia.org/wiki/File:Paphiopedilum_rothschildianum_(38895501350).jpg',
+      'https://commons.wikimedia.org/wiki/File:Paphiopedilum_rothschildianum_(25834537567).jpg',
       'CC BY-SA 2.0',
       'Naoki Takebayashi, via Wikimedia Commons'
     ),
