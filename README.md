@@ -1,10 +1,10 @@
 # OrchidCare Backend
 
-Backend API for OrchidCare, an orchid encyclopedia web app.
+Node, Express, TypeScript, and PostgreSQL API for the OrchidCare orchid encyclopedia.
 
-This repository contains the Node, Express, TypeScript, and PostgreSQL API shell for orchid data, search, filters, detailed care pages, and future account-backed features.
+The API serves orchid list data, search and filters, pagination, detail pages, rare orchid records, and image attribution metadata for the frontend.
 
-## Planned Stack
+## Stack
 
 - Node.js
 - Express
@@ -13,29 +13,56 @@ This repository contains the Node, Express, TypeScript, and PostgreSQL API shell
 - Docker Compose for local database development
 - npm
 
-## Planned MVP API
+## API Endpoints
 
 - `GET /api/health`
 - `GET /api/orchids`
 - `GET /api/orchids/:slug`
 - `GET /api/orchid-filters`
 
-## Planned Database
-
-The MVP database will use PostgreSQL and a repeatable SQL seed file with 50 real orchid types. Orchid image data must include legally reusable source URLs, license information, and attribution.
-
-## Current Status
-
-This is a project bootstrap scaffold. The health API can run, but the orchid database and feature endpoints are still planned work.
+`GET /api/orchids` supports search, filters, pagination, and rare-orchid filtering.
 
 ## Local Setup
 
+Install dependencies:
+
 ```bash
 npm install
+```
+
+Create a local environment file if needed:
+
+```bash
+cp .env.example .env
+```
+
+Default local values:
+
+```bash
+PORT=3000
+DATABASE_URL=postgresql://orchidcare:orchidcare@localhost:5432/orchidcare
+CORS_ORIGIN=http://localhost:5173
+```
+
+Start PostgreSQL:
+
+```bash
+docker compose up -d
+```
+
+Apply the schema and seed data:
+
+```bash
+npm run db:reset
+```
+
+Start the API:
+
+```bash
 npm run dev
 ```
 
-The API will start on:
+The API runs at:
 
 ```bash
 http://localhost:3000/api
@@ -47,18 +74,26 @@ Health check:
 curl http://localhost:3000/api/health
 ```
 
-PostgreSQL can be started later with:
+## Useful Scripts
 
 ```bash
-docker compose up -d
-```
-
-Apply the database schema and seed data with:
-
-```bash
+npm run lint
+npm run format:check
+npm run build
+npm run db:schema
+npm run db:seed
 npm run db:reset
 ```
 
-The database scripts read `DATABASE_URL` from the environment. If it is not set, they use the local development value from `.env.example`.
+Use `npm run build` before publishing or reviewing a final change.
 
-The current seed file is a placeholder for the planned 50 real orchid records.
+## Database Notes
+
+- `db/schema.sql` defines the repeatable PostgreSQL schema.
+- `db/seed.sql` seeds the current orchid encyclopedia records, including rare orchids.
+- Image data should include a reusable image URL, source URL, license, alt text, and attribution.
+- The seed script assumes a clean schema. Use `npm run db:reset` when reloading all seed data locally.
+
+## Later Features
+
+Authentication, synced favorites, personal orchid collections, notes, reminders, and admin content tools are planned after the public MVP is stable.
