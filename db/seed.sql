@@ -2083,4 +2083,30 @@ WHERE slug IN (
   'showy-ladys-slipper'
 );
 
+UPDATE orchids
+SET native_region = native_region
+  || '. This region gives important clues about temperature rhythm, seasonal rainfall, and natural light levels. In cultivation, use the location as a guide rather than an exact recipe, because home conditions are usually more stable than wild habitats.'
+;
+
+UPDATE orchid_care_profiles
+SET
+  potting_medium = orchid_care_profiles.potting_medium
+    || CASE orchids.growth_type
+      WHEN 'epiphyte' THEN ' Epiphytic orchids naturally hold onto bark or branches, so the root zone should stay airy rather than packed tight. Choose a medium that drains quickly, lets oxygen reach the roots, and dries at a predictable pace.'
+      WHEN 'terrestrial' THEN ' Terrestrial orchids grow with their roots in ground-level organic material, but they still need drainage and oxygen. Avoid heavy garden soil in pots, because dense wet media can suffocate roots and encourage rot.'
+      WHEN 'lithophyte' THEN ' Lithophytic orchids anchor among rocks and mineral debris, so they benefit from open drainage and a firm, airy root environment. Mineral or bark-based mixes should hold some moisture without staying waterlogged.'
+      ELSE ' Semi-terrestrial orchids need a balance between moisture-holding material and open drainage. The best mix supports the roots, keeps gentle humidity around them, and still allows excess water to leave fast.'
+    END,
+  bloom_notes = orchid_care_profiles.bloom_notes
+    || ' Blooming is usually strongest when light, temperature, and watering rhythm match the plant''s active growth cycle. Avoid sudden changes once buds are forming, because stress, dryness, or stagnant air can shorten or interrupt flowering.',
+  care_summary = orchid_care_profiles.care_summary
+    || CASE
+      WHEN orchids.is_rare THEN ' Treat this profile as learning and conservation guidance first. Rare orchids should come only from legal propagated sources, and wild plants or protected habitats should never be disturbed.'
+      WHEN orchid_care_profiles.difficulty = 'beginner' THEN ' For a beginner-friendly routine, observe the roots and potting mix before watering instead of following a strict calendar. Small consistent adjustments are safer than dramatic changes in light, water, or temperature.'
+      WHEN orchid_care_profiles.difficulty = 'intermediate' THEN ' This orchid rewards steady observation and small seasonal adjustments. Track how quickly the medium dries, how new growth develops, and whether leaves show signs of too much or too little light.'
+      ELSE ' This orchid needs closer attention to seasonal rhythm, airflow, water quality, and root health. Change conditions gradually and avoid forcing growth when the plant is resting or recovering.'
+    END
+FROM orchids
+WHERE orchid_care_profiles.orchid_id = orchids.id;
+
 COMMIT;
